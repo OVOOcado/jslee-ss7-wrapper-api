@@ -9,10 +9,7 @@
 package pl.ovoo.ss7.wrapper.map;
 
 import pl.ovoo.ss7.wrapper.Ss7WrapperException;
-import pl.ovoo.ss7.wrapper.map.args.AnyTimeInterrogationArgWrapper;
-import pl.ovoo.ss7.wrapper.map.args.AnyTimeInterrogationResultWrapper;
-import pl.ovoo.ss7.wrapper.map.args.SendRoutingInfoRequestArgWrapper;
-import pl.ovoo.ss7.wrapper.map.args.SendRoutingInfoResponseWrapper;
+import pl.ovoo.ss7.wrapper.map.args.*;
 
 /**
  * CallHandlingMapDialogWrapper
@@ -25,7 +22,7 @@ public interface CallHandlingMapDialogWrapper extends MapDialogWrapper {
     
     void sendSendRoutingInfoResponse(long invoke, SendRoutingInfoResponseWrapper arg) throws Ss7WrapperException;
 
-    int sendAnyTimeInterrogationRequest(long sriTimeout, AnyTimeInterrogationArgWrapper arg) throws Ss7WrapperException;
+    int sendSendRoutingInfoForSMRequest(long sriTimeout, SendRoutingInfoForSMRequestArgWrapper arg) throws Ss7WrapperException;
 
-    void sendAnyTimeInterrogationResponse(long invoke, AnyTimeInterrogationResultWrapper arg) throws Ss7WrapperException;
+    void sendSendRoutingInfoForSMResponse(long invoke, SendRoutingInfoForSMResponseWrapper arg) throws Ss7WrapperException;
 }
