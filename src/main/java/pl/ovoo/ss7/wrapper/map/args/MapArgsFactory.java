@@ -31,6 +31,10 @@ public interface MapArgsFactory extends Serializable {
             ISDNAddressStringWrapper.NumberingPlan numberingPlan,
             String address);
 
+	AddressStringWrapper createAddressString(ISDNAddressStringWrapper.Nature nature,
+                                             ISDNAddressStringWrapper.NumberingPlan numberingPlan,
+                                             String address);
+
 	MAPLocationInformationWrapper createMapLocationInformation(MAPCellGlobalIdOrServiceAreaIdOrLAIWrapper mapCellGlobalIdOrServiceAreaIdOrLAI,
             ISDNAddressStringWrapper vlrNumber);
 
@@ -94,4 +98,6 @@ public interface MapArgsFactory extends Serializable {
     MAPUserAbortChoiceWrapper createMAPUserAbortChoiceWrapper();
     
     SendRoutingInfoRequestArgWrapper createSendRoutingInfoRequestArgWrapper(ISDNAddressStringWrapper msisdn, ISDNAddressStringWrapper gmscAddress);
+
+    SendRoutingInfoForSMRequestArgWrapper createSendRoutingInfoRequestForSMArgWrapper(ISDNAddressStringWrapper msisdn, AddressStringWrapper scAddress);
 }

@@ -1,5 +1,6 @@
 package pl.ovoo.ss7.wrapper.map.args;
 
+import pl.ovoo.ss7.wrapper.common.args.AddressStringWrapper;
 import pl.ovoo.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 
 import java.io.Serializable;
@@ -10,4 +11,6 @@ import java.io.Serializable;
 public interface SendRoutingInfoForSMRequestArgWrapper extends Serializable{
 
     ISDNAddressStringWrapper getMsisdn();
+
+    AddressStringWrapper getScAddress();
 }
