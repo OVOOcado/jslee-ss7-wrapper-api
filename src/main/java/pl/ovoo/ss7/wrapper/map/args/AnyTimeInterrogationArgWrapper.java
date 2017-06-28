@@ -10,11 +10,13 @@ package pl.ovoo.ss7.wrapper.map.args;
 
 import java.io.Serializable;
 
+import pl.ovoo.ss7.wrapper.common.args.ISDNAddressStringWrapper;
+
 /**
  * AnyTimeInterrogationWrapper
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface AnyTimeInterrogationArgWrapper extends Serializable {
-
+    ISDNAddressStringWrapper getGsmScf();
 }
