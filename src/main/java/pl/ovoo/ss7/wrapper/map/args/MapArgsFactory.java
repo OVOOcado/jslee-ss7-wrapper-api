@@ -100,4 +100,6 @@ public interface MapArgsFactory extends Serializable {
     SendRoutingInfoRequestArgWrapper createSendRoutingInfoRequestArgWrapper(ISDNAddressStringWrapper msisdn, ISDNAddressStringWrapper gmscAddress);
 
     SendRoutingInfoForSMRequestArgWrapper createSendRoutingInfoRequestForSMArgWrapper(ISDNAddressStringWrapper msisdn, AddressStringWrapper scAddress);
+
+    MtForwardShortMessageRequestWrapper createMtForwardShortMessageRequestWrapper(String text,AddressStringWrapper scOA, IMSIAddressWrapper imsi);
 }
