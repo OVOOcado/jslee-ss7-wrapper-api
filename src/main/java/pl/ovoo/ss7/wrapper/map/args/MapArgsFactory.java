@@ -19,6 +19,7 @@ import pl.ovoo.ss7.wrapper.map.MapDialogWrapper;
 import pl.ovoo.ss7.wrapper.map.MobilityMapDialogWrapper;
 
 import java.io.Serializable;
+import java.nio.charset.Charset;
 
 /**
  * MapArgsFactory
@@ -101,5 +102,5 @@ public interface MapArgsFactory extends Serializable {
 
     SendRoutingInfoForSMRequestArgWrapper createSendRoutingInfoRequestForSMArgWrapper(ISDNAddressStringWrapper msisdn, AddressStringWrapper scAddress);
 
-    MtForwardShortMessageRequestWrapper createMtForwardShortMessageRequestWrapper(String text,AddressStringWrapper scOA, IMSIAddressWrapper imsi);
+    MtForwardShortMessageRequestWrapper createMtForwardShortMessageRequestWrapper(String text, String charset, AddressStringWrapper scOA, IMSIAddressWrapper imsi);
 }
