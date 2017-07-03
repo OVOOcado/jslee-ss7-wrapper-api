@@ -10,6 +10,7 @@ package pl.ovoo.ss7.wrapper.map.args;
 
 import java.io.Serializable;
 
+import pl.ovoo.ss7.wrapper.cap.args.RequestedInformationWrapper;
 import pl.ovoo.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 
 /**

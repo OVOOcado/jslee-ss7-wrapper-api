@@ -20,4 +20,8 @@ public interface LegIDWrapper extends Serializable {
     LegType getReceivingSideID();
 
     LegType getSendingSideID();
+
+    boolean isReceivingSideIDChosen();
+
+    boolean isSendingSideIDChosen();
 }
