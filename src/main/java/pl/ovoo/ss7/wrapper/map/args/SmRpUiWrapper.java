@@ -9,9 +9,11 @@ import java.nio.charset.Charset;
  */
 public interface SmRpUiWrapper extends Serializable {
 
-    byte[] getText();
+    byte[] getData();
+    
+    String getText();
 
-    String getCharset();
+    CharsetWrapper getCharset();
 
     String getOriginatingAddress();
 }

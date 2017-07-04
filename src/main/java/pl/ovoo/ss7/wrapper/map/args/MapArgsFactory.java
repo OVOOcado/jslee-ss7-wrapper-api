@@ -8,6 +8,9 @@
 
 package pl.ovoo.ss7.wrapper.map.args;
 
+import java.io.Serializable;
+import java.nio.charset.Charset;
+
 import pl.ovoo.ss7.wrapper.Ss7WrapperException;
 import pl.ovoo.ss7.wrapper.common.args.AddressStringWrapper;
 import pl.ovoo.ss7.wrapper.common.args.IMSIAddressWrapper;
@@ -15,11 +18,7 @@ import pl.ovoo.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 import pl.ovoo.ss7.wrapper.common.args.SccpAddressWrapper;
 import pl.ovoo.ss7.wrapper.map.CallHandlingMapDialogWrapper;
 import pl.ovoo.ss7.wrapper.map.MapApplicationContextWrapper;
-import pl.ovoo.ss7.wrapper.map.MapDialogWrapper;
 import pl.ovoo.ss7.wrapper.map.MobilityMapDialogWrapper;
-
-import java.io.Serializable;
-import java.nio.charset.Charset;
 
 /**
  * MapArgsFactory
@@ -102,5 +101,5 @@ public interface MapArgsFactory extends Serializable {
 
     SendRoutingInfoForSMRequestArgWrapper createSendRoutingInfoRequestForSMArgWrapper(ISDNAddressStringWrapper msisdn, AddressStringWrapper scAddress);
 
-    MtForwardShortMessageRequestWrapper createMtForwardShortMessageRequestWrapper(String text, String charset, AddressStringWrapper scOA, IMSIAddressWrapper imsi);
+    MtForwardShortMessageRequestWrapper createMtForwardShortMessageRequestWrapper(String text, Charset charset, AddressStringWrapper scOA, IMSIAddressWrapper imsi, String origAddress);
 }
