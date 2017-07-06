@@ -13,4 +13,6 @@ public interface MtForwardShortMessageRequestWrapper extends Serializable {
     SmRpUiWrapper getSm_Rp_Ui();
 
     SmRpOaWrapper getSm_Rp_Oa();
+
+    boolean getMoreMessagesToSend();
 }
