@@ -16,10 +16,11 @@ public enum DataCodingWrapper {
         return this.value;
     }
 
-    public static DataCodingWrapper lookup(int charsetId){
-        for(DataCodingWrapper m : values()){
-            if(m.value == charsetId) return m;
-        }
-        return null;
+    public static DataCodingWrapper lookup(String charsetName){
+        if("UTF-16".equals(charsetName) || "UTF-16BE".equals(charsetName) || "UTF16-LE".equals(charsetName))
+            return DataCodingWrapper.UCS2;
+        else
+            return DataCodingWrapper.GSM7;
     }
 }
+
