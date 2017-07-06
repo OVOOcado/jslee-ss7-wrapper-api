@@ -13,7 +13,7 @@ public interface SmRpUiWrapper extends Serializable {
     
     String getText();
 
-    CharsetWrapper getCharset();
+    DataCodingWrapper getCharset();
 
     String getOriginatingAddress();
 }
