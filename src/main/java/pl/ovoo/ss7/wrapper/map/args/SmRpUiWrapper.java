@@ -16,4 +16,14 @@ public interface SmRpUiWrapper extends Serializable {
     DataCodingWrapper getCharset();
 
     String getOriginatingAddress();
+
+    boolean getMoreMessagesToSend();
+
+    boolean getIsConcatened();
+
+    int getMessageRef();
+
+    int getSegmCnt();
+
+    int getSegmNum();
 }
