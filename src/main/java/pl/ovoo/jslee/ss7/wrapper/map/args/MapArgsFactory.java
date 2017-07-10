@@ -100,4 +100,6 @@ public interface MapArgsFactory extends Serializable {
 
     MtForwardShortMessageRequestWrapper createMtForwardShortMessageRequestWrapper(String text, Charset charset, AddressStringWrapper scOA, IMSIAddressWrapper imsi, String origAddress, boolean moreMessagesToSend,
     		boolean isConcatened, int msgRef, int segmCnt, int segmNum);
+    
+    MAPRequestedInfoWrapper createMAPRequestedInfoWrapper(boolean locationInformationPresent, boolean currentLocationPresent, boolean subscriberStatePresent);
 }
