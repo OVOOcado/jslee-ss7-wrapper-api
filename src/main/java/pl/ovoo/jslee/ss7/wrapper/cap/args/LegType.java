@@ -20,7 +20,9 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
-public class LegType {
+import java.io.Serializable;
+
+public class LegType implements Serializable{
     private static final int _CALLING_PARTY = 1;
     private static final int _CALLED_PARTY = 2;
 

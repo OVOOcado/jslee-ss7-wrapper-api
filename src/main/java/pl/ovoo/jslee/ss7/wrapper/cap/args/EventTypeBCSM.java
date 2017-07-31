@@ -20,7 +20,9 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
-public class EventTypeBCSM {
+import java.io.Serializable;
+
+public class EventTypeBCSM implements Serializable{
     private static final int _origAttemptAuthorized = 1;
     private static final int _collectedInfo = 2;
     private static final int _analyzedInformation = 3;

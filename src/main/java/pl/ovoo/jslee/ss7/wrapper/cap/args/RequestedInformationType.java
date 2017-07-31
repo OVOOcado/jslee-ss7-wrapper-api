@@ -20,7 +20,9 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
-public class RequestedInformationType {
+import java.io.Serializable;
+
+public class RequestedInformationType implements Serializable{
     private static final int _callAttemptElapsedTime = 0;
     private static final int _callStopTime = 1;
     private static final int _callConnectedElapsedTime = 2;
