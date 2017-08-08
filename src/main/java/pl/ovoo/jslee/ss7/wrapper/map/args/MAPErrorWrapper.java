@@ -28,4 +28,5 @@ import java.io.Serializable;
  * @author kacper.mosienski@ovoo.pl
  */
 public interface MAPErrorWrapper extends Serializable {
+    MAPErrorMessageWrapper getMapErrorMessage();
 }

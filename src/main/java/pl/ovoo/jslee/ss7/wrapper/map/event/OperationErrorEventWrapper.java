@@ -1,3 +1,4 @@
+
 /*
  * JSLEE SS7 Wrapper API
  *  Copyright (C) 2016-2017 "OVOO Sp. z o.o."
@@ -26,4 +27,5 @@ package pl.ovoo.jslee.ss7.wrapper.map.event;
  * @author pawel.borecki@ovoo.pl
  */
 public interface OperationErrorEventWrapper extends MapEventWrapper {
+
 }
