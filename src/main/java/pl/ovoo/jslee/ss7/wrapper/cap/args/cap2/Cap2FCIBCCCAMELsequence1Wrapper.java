@@ -20,10 +20,12 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
+import java.io.Serializable;
+
 /**
  * Cap2FCIBCCCAMELsequence1Wrapper
  *
  * @author pawel.borecki@ovoo.pl
  */
-public interface Cap2FCIBCCCAMELsequence1Wrapper {
+public interface Cap2FCIBCCCAMELsequence1Wrapper extends Serializable{
 }

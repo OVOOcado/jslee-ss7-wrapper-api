@@ -20,12 +20,14 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
+import java.io.Serializable;
+
 /**
  * BCSMEventWrapper
  *
  * @author pawel.borecki@ovoo.pl
  */
-public interface BCSMEventWrapper {
+public interface BCSMEventWrapper extends Serializable{
 
     EventTypeBCSM getEventTypeBCSM();
 

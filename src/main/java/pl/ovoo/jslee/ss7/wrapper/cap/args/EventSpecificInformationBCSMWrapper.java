@@ -20,6 +20,8 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
+import java.io.Serializable;
+
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
 /**
@@ -27,7 +29,7 @@ import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
  *
  * @author pawel.borecki@ovoo.pl
  */
-public interface EventSpecificInformationBCSMWrapper {
+public interface EventSpecificInformationBCSMWrapper extends Serializable{
 
     boolean isTCalledPartyBusySpecificInfoChosen();
 
