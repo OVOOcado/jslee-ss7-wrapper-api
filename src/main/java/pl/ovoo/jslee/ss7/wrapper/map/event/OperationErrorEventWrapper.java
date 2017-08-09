@@ -21,11 +21,14 @@
 
 package pl.ovoo.jslee.ss7.wrapper.map.event;
 
+import pl.ovoo.jslee.ss7.wrapper.map.args.ErrorComponentWrapper;
+
 /**
  * OperationErrorEventWrapper
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface OperationErrorEventWrapper extends MapEventWrapper {
-
+    
+    ErrorComponentWrapper getOperationErrorEvent();
 }

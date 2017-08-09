@@ -6,6 +6,7 @@ public interface MAPErrorMessageWrapper extends Serializable {
     
     public enum ErrorCode {
 
+        PARAMETERLESS(0),
         SYSTEM_FAILURE(34),
         DATA_MISSING(35), 
         UNEXPECTED_DATA_VALUE(36), 
