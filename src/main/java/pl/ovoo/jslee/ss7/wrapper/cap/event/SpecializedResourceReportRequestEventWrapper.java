@@ -22,12 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.SpecializedResourceReportArgWrapper;
 
+
 /**
- * SpecializedResourceReportRequestEventWrapper
+ * SpecializedResourceReportRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface SpecializedResourceReportRequestEventWrapper extends ArgumentEventWrapper<SpecializedResourceReportArgWrapper> {
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.cap.event.ArgumentEventWrapper#getArgument()
+     */
     SpecializedResourceReportArgWrapper getArgument();
 }

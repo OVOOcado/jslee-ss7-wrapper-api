@@ -22,12 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * CancelArgWrapper
+ * CancelArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CancelArgWrapper extends Serializable {
 
+    /**
+     * Sets the all requests.
+     */
     void setAllRequests();
 }

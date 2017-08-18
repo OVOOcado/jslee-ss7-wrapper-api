@@ -22,18 +22,39 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * BCSMEventWrapper
+ * BCSMEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface BCSMEventWrapper extends Serializable{
 
+    /**
+     * Gets the event type bcsm.
+     *
+     * @return the event type bcsm
+     */
     EventTypeBCSM getEventTypeBCSM();
 
+    /**
+     * Gets the monitor mode.
+     *
+     * @return the monitor mode
+     */
     MonitorMode getMonitorMode();
 
+    /**
+     * Checks for leg id.
+     *
+     * @return true, if successful
+     */
     boolean hasLegID();
 
+    /**
+     * Gets the leg id.
+     *
+     * @return the leg id
+     */
     LegIDWrapper getLegID();
 }

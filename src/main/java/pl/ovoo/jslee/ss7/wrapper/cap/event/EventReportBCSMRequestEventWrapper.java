@@ -22,12 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.EventReportBCSMArgWrapper;
 
+
 /**
- * EventReportBCSMRequestEventWrapper
+ * EventReportBCSMRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface EventReportBCSMRequestEventWrapper extends ArgumentEventWrapper<EventReportBCSMArgWrapper> {
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.cap.event.ArgumentEventWrapper#getArgument()
+     */
     EventReportBCSMArgWrapper getArgument();
 }

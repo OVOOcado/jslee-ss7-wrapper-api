@@ -25,10 +25,24 @@
  */
 package pl.ovoo.jslee.ss7.wrapper.map.args;
 
+
+/**
+ * The Enum SSCode.
+ */
 public enum SSCode {
+	
+	/** The all forwarding ss. */
 	ALL_FORWARDING_SS,
+	
+	/** The cfnry. */
 	CFNRY,
+	
+	/** The cfb. */
 	CFB,
+	
+	/** The cfnrc. */
 	CFNRC,
+	
+	/** The cfu. */
 	CFU
 }

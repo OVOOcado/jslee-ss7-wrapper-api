@@ -21,7 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 /**
- * FreeFormatDataWrapper
+ * FreeFormatDataWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

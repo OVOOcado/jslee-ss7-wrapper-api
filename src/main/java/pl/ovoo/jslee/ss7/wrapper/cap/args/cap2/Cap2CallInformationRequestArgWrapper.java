@@ -23,14 +23,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.CallInformationRequestArgWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.SendingSideIDWrapper;
 
+
 /**
- * Cap2CallInformationRequestArgWrapper
+ * Cap2CallInformationRequestArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2CallInformationRequestArgWrapper extends CallInformationRequestArgWrapper {
 
+    /**
+     * Sets the leg id.
+     *
+     * @param sendingSideID the new leg id
+     */
     void setLegID(SendingSideIDWrapper sendingSideID);
 
+    /**
+     * Gets the leg id.
+     *
+     * @return the leg id
+     */
     SendingSideIDWrapper getLegID();
 }

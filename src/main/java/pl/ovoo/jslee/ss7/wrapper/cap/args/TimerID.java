@@ -20,19 +20,42 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
+
+/**
+ * The Enum TimerID.
+ */
 public enum TimerID {
+    
+    /** The tssf. */
     tssf(0);
 
+    /** The value. */
     private int value;
 
+    /**
+     * Instantiates a new timer id.
+     *
+     * @param code the code
+     */
     TimerID(int code) {
         this.value = code;
     }
 
+    /**
+     * Gets the value.
+     *
+     * @return the value
+     */
     public int getValue() {
         return this.value;
     }
 
+    /**
+     * Value of.
+     *
+     * @param id the id
+     * @return the timer id
+     */
     public static TimerID valueOf(int id) {
         for (TimerID m : values()) {
             if (m.value == id) {

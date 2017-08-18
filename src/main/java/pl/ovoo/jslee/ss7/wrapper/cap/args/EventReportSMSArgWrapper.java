@@ -22,16 +22,32 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * ConnectSMSArgWrapper
+ * ConnectSMSArgWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface EventReportSMSArgWrapper extends Serializable{
 
+	/**
+	 * Gets the event type sms.
+	 *
+	 * @return the event type sms
+	 */
 	EventTypeSMS getEventTypeSMS();
 	
+	/**
+	 * Gets the event specific information sms.
+	 *
+	 * @return the event specific information sms
+	 */
 	EventSpecificInformationSMSWrapper getEventSpecificInformationSMS();
 	
+	/**
+	 * Checks for event specific information sms.
+	 *
+	 * @return true, if successful
+	 */
 	boolean hasEventSpecificInformationSMS();
 }

@@ -25,12 +25,23 @@ import java.io.Serializable;
 import pl.ovoo.jslee.ss7.wrapper.common.args.IMSIAddressWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.RoutingInfoWrapper;
 
+
 /**
  * Created by karolsimka on 06.06.17.
  */
 public interface SendRoutingInfoResponseWrapper extends Serializable{
 
+    /**
+     * Gets the imsi.
+     *
+     * @return the imsi
+     */
     IMSIAddressWrapper getImsi();
 
+    /**
+     * Gets the routing info.
+     *
+     * @return the routing info
+     */
     RoutingInfoWrapper getRoutingInfo();
 }

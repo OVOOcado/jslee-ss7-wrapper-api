@@ -22,16 +22,32 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import java.io.Serializable;
 
+
 /**
- * Cap2TimeDurationChargingResultWrapper
+ * Cap2TimeDurationChargingResultWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2TimeDurationChargingResultWrapper extends Serializable {
 
+    /**
+     * Checks for time information.
+     *
+     * @return true, if successful
+     */
     boolean hasTimeInformation();
 
+    /**
+     * Gets the time information.
+     *
+     * @return the time information
+     */
     Cap2TimeInformationWrapper getTimeInformation();
 
+    /**
+     * Gets the call active.
+     *
+     * @return the call active
+     */
     boolean getCallActive();
 }

@@ -23,16 +23,32 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 import java.io.Externalizable;
 import java.io.Serializable;
 
+
 /**
- * AssistRequestInstructionsArgWrapper
+ * AssistRequestInstructionsArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface AssistRequestInstructionsArgWrapper extends Externalizable {
 
+    /**
+     * Checks for correlation id.
+     *
+     * @return true, if successful
+     */
     boolean hasCorrelationID();
 
+    /**
+     * Gets the correlation id.
+     *
+     * @return the correlation id
+     */
     GenericNumberWrapper getCorrelationID();
 
+    /**
+     * Sets the correlation id.
+     *
+     * @param correlationID the new correlation id
+     */
     void setCorrelationID(GenericNumberWrapper correlationID);
 }

@@ -22,28 +22,73 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 
 import java.io.Serializable;
-import java.nio.charset.Charset;
+
 
 /**
  * Created by karolsimka on 03.07.17.
  */
 public interface SmRpUiWrapper extends Serializable {
 
+    /**
+     * Gets the data.
+     *
+     * @return the data
+     */
     byte[] getData();
     
+    /**
+     * Gets the text.
+     *
+     * @return the text
+     */
     String getText();
 
+    /**
+     * Gets the charset.
+     *
+     * @return the charset
+     */
     DataCodingWrapper getCharset();
 
+    /**
+     * Gets the originating address.
+     *
+     * @return the originating address
+     */
     String getOriginatingAddress();
 
+    /**
+     * Gets the more messages to send.
+     *
+     * @return the more messages to send
+     */
     boolean getMoreMessagesToSend();
 
+    /**
+     * Gets the checks if is concatened.
+     *
+     * @return the checks if is concatened
+     */
     boolean getIsConcatened();
 
+    /**
+     * Gets the message ref.
+     *
+     * @return the message ref
+     */
     int getMessageRef();
 
+    /**
+     * Gets the segm cnt.
+     *
+     * @return the segm cnt
+     */
     int getSegmCnt();
 
+    /**
+     * Gets the segm num.
+     *
+     * @return the segm num
+     */
     int getSegmNum();
 }

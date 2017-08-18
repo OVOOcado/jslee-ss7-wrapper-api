@@ -22,46 +22,115 @@ package pl.ovoo.jslee.ss7.wrapper.common.args;
 
 import java.io.Serializable;
 
+
 /**
- * GlobalTitleWrapper
+ * GlobalTitleWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface GlobalTitleWrapper extends Serializable {
 
+	/**
+	 * Gets the address.
+	 *
+	 * @return the address
+	 */
 	String getAddress();
 	
+	/**
+	 * Gets the numbering plan.
+	 *
+	 * @return the numbering plan
+	 */
 	NumberingPlan getNumberingPlan();
 	
+	/**
+	 * Gets the nature of address.
+	 *
+	 * @return the nature of address
+	 */
 	Nature getNatureOfAddress();
 	
+	/**
+	 * Gets the global title indicator.
+	 *
+	 * @return the global title indicator
+	 */
 	GlobalTitleIndicator getGlobalTitleIndicator();
 
+    /**
+     * Gets the translation type.
+     *
+     * @return the translation type
+     */
     Integer getTranslationType();
 	
+	/**
+	 * Gets the encoding scheme.
+	 *
+	 * @return the encoding scheme
+	 */
 	EncodingScheme getEncodingScheme();
 	
+	/**
+	 * The Enum NumberingPlan.
+	 */
 	enum NumberingPlan {
+		
+		/** The numbering plan unknown. */
 		NUMBERING_PLAN_UNKNOWN(0),
-	    NUMBERING_PLAN_ISDN(1),
-	    NUMBERING_PLAN_GENERIC(2),
-	    NUMBERING_PLAN_DATA(3),
-	    NUMBERING_PLAN_TELEX(4),
-	    NUMBERING_PLAN_MARITIME_MOBILE(5),
-	    NUMBERING_PLAN_LAND_MOBILE(6),
-	    NUMBERING_PLAN_ISDN_MOBILE(7),
-	    NUMBERING_PLAN_PRIVATE(14);
+	    
+    	/** The numbering plan isdn. */
+    	NUMBERING_PLAN_ISDN(1),
+	    
+    	/** The numbering plan generic. */
+    	NUMBERING_PLAN_GENERIC(2),
+	    
+    	/** The numbering plan data. */
+    	NUMBERING_PLAN_DATA(3),
+	    
+    	/** The numbering plan telex. */
+    	NUMBERING_PLAN_TELEX(4),
+	    
+    	/** The numbering plan maritime mobile. */
+    	NUMBERING_PLAN_MARITIME_MOBILE(5),
+	    
+    	/** The numbering plan land mobile. */
+    	NUMBERING_PLAN_LAND_MOBILE(6),
+	    
+    	/** The numbering plan isdn mobile. */
+    	NUMBERING_PLAN_ISDN_MOBILE(7),
+	    
+    	/** The numbering plan private. */
+    	NUMBERING_PLAN_PRIVATE(14);
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new numbering plan.
+         *
+         * @param code the code
+         */
         NumberingPlan(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the numbering plan
+         */
         public static NumberingPlan valueOf(int id) {
             for (NumberingPlan m : values()) {
                 if (m.value == id) {
@@ -72,23 +141,53 @@ public interface GlobalTitleWrapper extends Serializable {
         }
     }
     
+    /**
+     * The Enum EncodingScheme.
+     */
     enum EncodingScheme {
-    	UNKNOWN((byte)0),
-    	BCD_ODD((byte)1),
-    	BCD_EVEN((byte)2),
-    	IA5((byte)3),
-    	BINARY((byte)4);
+    	
+	    /** The unknown. */
+	    UNKNOWN((byte)0),
+    	
+	    /** The bcd odd. */
+	    BCD_ODD((byte)1),
+    	
+	    /** The bcd even. */
+	    BCD_EVEN((byte)2),
+    	
+	    /** The I a5. */
+	    IA5((byte)3),
+    	
+	    /** The binary. */
+	    BINARY((byte)4);
 
+        /** The value. */
         private byte value;
 
+        /**
+         * Instantiates a new encoding scheme.
+         *
+         * @param code the code
+         */
         private EncodingScheme(byte code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public byte getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the encoding scheme
+         */
         public static EncodingScheme valueOf(byte id) {
         	for (EncodingScheme m : values()) {
                 if (m.value == id) {
@@ -99,22 +198,50 @@ public interface GlobalTitleWrapper extends Serializable {
         }
     }
 
+    /**
+     * The Enum Nature.
+     */
     enum Nature {
-    	NATURE_UNKNOWN(0),
-    	NATURE_SUBSCRIBER_NUMBER(1),
-    	NATURE_NATIONAL_NUMBER(3),
-    	NATURE_INTERNATIONAL_NUMBER(4);
+    	
+	    /** The nature unknown. */
+	    NATURE_UNKNOWN(0),
+    	
+	    /** The nature subscriber number. */
+	    NATURE_SUBSCRIBER_NUMBER(1),
+    	
+	    /** The nature national number. */
+	    NATURE_NATIONAL_NUMBER(3),
+    	
+	    /** The nature international number. */
+	    NATURE_INTERNATIONAL_NUMBER(4);
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new nature.
+         *
+         * @param code the code
+         */
         private Nature(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the nature
+         */
         public static Nature valueOf(int id) {
         	for (Nature m : values()) {
                 if (m.value == id) {
@@ -125,23 +252,53 @@ public interface GlobalTitleWrapper extends Serializable {
         }
     }
     
+    /**
+     * The Enum GlobalTitleIndicator.
+     */
     enum GlobalTitleIndicator{
+		
+		/** The G t_0000. */
 		GT_0000(0), 
+		
+		/** The G t_0001. */
 		GT_0001(1), 
+		
+		/** The G t_0010. */
 		GT_0010(2), 
+		
+		/** The G t_0011. */
 		GT_0011(3), 
+		
+		/** The G t_0100. */
 		GT_0100(4);
 
+		/** The value. */
 		private final int value;
 
+		/**
+		 * Instantiates a new global title indicator.
+		 *
+		 * @param value the value
+		 */
 		private GlobalTitleIndicator(int value) {
 			this.value = value;
 		}
 
+		/**
+		 * Gets the value.
+		 *
+		 * @return the value
+		 */
 		public int getValue() {
 			return this.value;
 		}
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the global title indicator
+         */
         public static GlobalTitleIndicator valueOf(int id) {
         	for (GlobalTitleIndicator m : values()) {
                 if (m.value == id) {

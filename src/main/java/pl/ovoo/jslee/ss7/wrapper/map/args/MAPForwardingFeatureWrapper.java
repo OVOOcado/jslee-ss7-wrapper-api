@@ -24,17 +24,33 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.common.args.AddressStringWrapper;
 
+
 /**
- * MAPForwardingFeatureWrapper
+ * MAPForwardingFeatureWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface MAPForwardingFeatureWrapper extends Serializable {
 	
+	/**
+	 * Gets the forwarding options.
+	 *
+	 * @return the forwarding options
+	 */
 	MAPForwardingOptionsWrapper getForwardingOptions();
 	
+	/**
+	 * Gets the forwarded to number.
+	 *
+	 * @return the forwarded to number
+	 */
 	AddressStringWrapper getForwardedToNumber();
 	
+	/**
+	 * Gets the CF status.
+	 *
+	 * @return the CF status
+	 */
 	byte[] getCFStatus();
 	
 	//void setForwardingOptions(MAPForwardingOptionsWrapper forwardingOptions);

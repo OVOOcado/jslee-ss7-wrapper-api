@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * ResetTimerArgWrapper
+ * ResetTimerArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface ResetTimerArgWrapper extends Serializable {
 
+    /**
+     * Sets the timer id.
+     *
+     * @param timeID the new timer id
+     */
     void setTimerID(TimerID timeID);
 
+    /**
+     * Sets the timer value.
+     *
+     * @param timerValue the new timer value
+     */
     void setTimerValue(int timerValue);
 }

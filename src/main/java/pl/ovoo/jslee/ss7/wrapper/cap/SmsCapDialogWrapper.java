@@ -27,22 +27,64 @@ import pl.ovoo.jslee.ss7.wrapper.cap.args.InitialDPSMSArgWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.ReleaseSMSArgWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.RequestReportSMSEventArgWrapper;
 
+
 /**
- * SmsCapDialogWrapper
+ * SmsCapDialogWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface SmsCapDialogWrapper extends CapDialogWrapper {
 
+    /**
+     * Send release sms.
+     *
+     * @param releaseSMSArgWrapper the release sms arg wrapper
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendReleaseSMS(ReleaseSMSArgWrapper releaseSMSArgWrapper) throws Ss7WrapperException;
 
+    /**
+     * Send request report sms event.
+     *
+     * @param cap3RequestReportSMSEventArg the cap3 request report sms event arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendRequestReportSMSEvent(RequestReportSMSEventArgWrapper cap3RequestReportSMSEventArg) throws Ss7WrapperException;
 
+    /**
+     * Send connect sms.
+     *
+     * @param cap3ConnectSMSArg the cap3 connect sms arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendConnectSMS(ConnectSMSArgWrapper cap3ConnectSMSArg) throws Ss7WrapperException;
     
+    /**
+     * Send initial dpsms.
+     *
+     * @param cap3InitialDPSMSArg the cap3 initial dpsms arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendInitialDPSMS(InitialDPSMSArgWrapper cap3InitialDPSMSArg) throws Ss7WrapperException;
     
+    /**
+     * Send continue sms.
+     *
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendContinueSMS() throws Ss7WrapperException;
     
+    /**
+     * Send event report sms.
+     *
+     * @param eventReportSMSArgWrapper the event report sms arg wrapper
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendEventReportSMS(EventReportSMSArgWrapper eventReportSMSArgWrapper) throws Ss7WrapperException;
 }

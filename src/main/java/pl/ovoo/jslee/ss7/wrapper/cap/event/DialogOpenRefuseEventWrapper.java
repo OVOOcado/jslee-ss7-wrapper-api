@@ -21,7 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 /**
- * DialogOpenAcceptEventWrapper
+ * DialogOpenAcceptEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

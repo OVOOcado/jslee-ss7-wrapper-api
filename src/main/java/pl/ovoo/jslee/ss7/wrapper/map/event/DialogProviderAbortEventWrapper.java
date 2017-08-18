@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.PAbortCauseType;
 
+
 /**
- * DialogProviderAbortEventWrapper
+ * DialogProviderAbortEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface DialogProviderAbortEventWrapper {
 
+    /**
+     * Gets the peer abort cause.
+     *
+     * @return the peer abort cause
+     */
     PAbortCauseType getPeerAbortCause();
 }

@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 import java.io.Serializable;
 
 /**
- * ApplyChargingReportArgWrapper
+ * ApplyChargingReportArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

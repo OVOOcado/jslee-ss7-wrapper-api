@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * RequestReportSMSEventArgWrapper
+ * RequestReportSMSEventArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface RequestReportSMSEventArgWrapper extends Serializable {
 
+    /**
+     * Gets the SMS events.
+     *
+     * @return the SMS events
+     */
     SMSEventWrapper[] getSMSEvents();
 }

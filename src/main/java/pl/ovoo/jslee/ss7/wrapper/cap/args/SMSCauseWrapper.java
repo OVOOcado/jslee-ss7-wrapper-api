@@ -22,34 +22,75 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * CauseWrapper
+ * CauseWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface SMSCauseWrapper extends Serializable {
 
+	/**
+	 * Gets the failure cause.
+	 *
+	 * @return the failure cause
+	 */
 	FailureCause getFailureCause();
 
+	/**
+	 * Sets the failure cause.
+	 *
+	 * @param failureCause the new failure cause
+	 */
 	void setFailureCause(FailureCause failureCause);
 
+    /**
+     * The Enum FailureCause.
+     */
     enum FailureCause {
+        
+        /** The system failure. */
         systemFailure(0),
+        
+        /** The unexpected data value. */
         unexpectedDataValue(1),
+        
+        /** The facility not supported. */
         facilityNotSupported(2),
+        
+        /** The s m_ delivery failure. */
         sM_DeliveryFailure(3),
+        
+        /** The release from radio interface. */
         releaseFromRadioInterface(4);
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new failure cause.
+         *
+         * @param code the code
+         */
         FailureCause(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the failure cause
+         */
         public static FailureCause valueOf(int id) {
             for (FailureCause m : values()) {
                 if (m.value == id) {

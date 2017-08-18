@@ -22,31 +22,70 @@ package pl.ovoo.jslee.ss7.wrapper.common.args;
 
 import java.io.Serializable;
 
+
 /**
- * AddressStringWrapper
+ * AddressStringWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface SccpAddressWrapper extends Serializable {
 	
+	/** The Constant SSN_HLR. */
 	public static final int SSN_HLR = 6;
 	
+	/** The Constant SSN_VLR. */
 	public static final int SSN_VLR = 7;
 	
+	/**
+	 * Gets the route on pc.
+	 *
+	 * @return the route on pc
+	 */
 	boolean getRouteOnPC();
 	
+	/**
+	 * Gets the ssn.
+	 *
+	 * @return the ssn
+	 */
 	Integer getSSN();
 	
+	/**
+	 * Gets the pc.
+	 *
+	 * @return the pc
+	 */
 	Integer getPC();
 	
+	/**
+	 * Gets the global title.
+	 *
+	 * @return the global title
+	 */
 	GlobalTitleWrapper getGlobalTitle();
 	
+	/**
+	 * Gets the type.
+	 *
+	 * @return the type
+	 */
 	Type getType();
 
+    /**
+     * The Enum Type.
+     */
     enum Type {
-    	A7,
-    	C7,
-    	CH7,
-    	J7;
+    	
+	    /** The A7. */
+	    A7,
+    	
+	    /** The C7. */
+	    C7,
+    	
+	    /** The C h7. */
+	    CH7,
+    	
+	    /** The J7. */
+	    J7;
     }
 }

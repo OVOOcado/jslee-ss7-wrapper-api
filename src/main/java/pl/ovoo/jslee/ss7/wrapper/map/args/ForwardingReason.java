@@ -25,22 +25,51 @@
  */
 package pl.ovoo.jslee.ss7.wrapper.map.args;
 
+
+/**
+ * The Enum ForwardingReason.
+ */
 public enum ForwardingReason {
+	
+	/** The ms not reachable. */
 	MS_NOT_REACHABLE(0),
+	
+	/** The ms busy. */
 	MS_BUSY(1),
+	
+	/** The no reply. */
 	NO_REPLY(2),
+	
+	/** The unconditional. */
 	UNCONDITIONAL(3);
 	
+	/** The value. */
 	private int value;
 
+    /**
+     * Instantiates a new forwarding reason.
+     *
+     * @param code the code
+     */
     private ForwardingReason(int code) {
         this.value = code;
     }
 
+    /**
+     * Gets the value.
+     *
+     * @return the value
+     */
     public int getValue() {
         return this.value;
     }
 
+    /**
+     * Value of.
+     *
+     * @param id the id
+     * @return the forwarding reason
+     */
     public static ForwardingReason valueOf(int id) {
     	for (ForwardingReason m : values()) {
             if (m.value == id) {

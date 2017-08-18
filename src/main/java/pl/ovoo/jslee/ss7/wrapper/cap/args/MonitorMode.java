@@ -20,17 +20,39 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
+
+/**
+ * The Enum MonitorMode.
+ */
 public enum MonitorMode {
+    
+    /** The interrupted. */
     interrupted(0),
+    
+    /** The notify and continue. */
     notifyAndContinue(1),
+    
+    /** The transparent. */
     transparent(2);
 
+    /** The value. */
     private int value;
 
+    /**
+     * Instantiates a new monitor mode.
+     *
+     * @param value the value
+     */
     MonitorMode(int value) {
         this.value = value;
     }
 
+    /**
+     * Value of.
+     *
+     * @param id the id
+     * @return the monitor mode
+     */
     public static MonitorMode valueOf(int id) {
         for (MonitorMode m : values()) {
             if (m.value == id) {
@@ -40,6 +62,11 @@ public enum MonitorMode {
         throw new IllegalArgumentException("No matching MonitorMode constant for id: " + id);
     }
 
+    /**
+     * Gets the value.
+     *
+     * @return the value
+     */
     public int getValue() {
         return value;
     }

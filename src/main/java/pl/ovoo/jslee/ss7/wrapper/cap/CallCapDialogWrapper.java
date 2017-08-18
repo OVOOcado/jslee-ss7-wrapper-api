@@ -38,44 +38,164 @@ import pl.ovoo.jslee.ss7.wrapper.cap.args.SpecializedResourceReportArgWrapper;
 
 import java.io.Serializable;
 
+
 /**
- * SmsCapDialogWrapper
+ * SmsCapDialogWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CallCapDialogWrapper extends CapDialogWrapper, Serializable {
 
+    /**
+     * Send release call.
+     *
+     * @param releaseCallArg the release call arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendReleaseCall(ReleaseCallArgWrapper releaseCallArg) throws Ss7WrapperException;
 
+    /**
+     * Send continue.
+     *
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendContinue() throws Ss7WrapperException;
 
+    /**
+     * Send connect.
+     *
+     * @param connectArg the connect arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendConnect(ConnectArgWrapper connectArg) throws Ss7WrapperException;
 
+    /**
+     * Send disconnect forward connection.
+     *
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendDisconnectForwardConnection() throws Ss7WrapperException;
 
+    /**
+     * Send request report bcsm event.
+     *
+     * @param requestReportBCSMEventArg the request report bcsm event arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendRequestReportBCSMEvent(RequestReportBCSMEventArgWrapper requestReportBCSMEventArg) throws Ss7WrapperException;
 
+    /**
+     * Send cancel.
+     *
+     * @param cancelArg the cancel arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendCancel(CancelArgWrapper cancelArg) throws Ss7WrapperException;
 
+    /**
+     * Send call information request.
+     *
+     * @param callInformationRequestArg the call information request arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendCallInformationRequest(CallInformationRequestArgWrapper callInformationRequestArg) throws Ss7WrapperException;
 
+    /**
+     * Send apply charging.
+     *
+     * @param applyChargingArg the apply charging arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendApplyCharging(ApplyChargingArgWrapper applyChargingArg) throws Ss7WrapperException;
 
+    /**
+     * Send establish temporary connection.
+     *
+     * @param establishTemporaryConnectionArg the establish temporary connection arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendEstablishTemporaryConnection(EstablishTemporaryConnectionArgWrapper establishTemporaryConnectionArg) throws Ss7WrapperException;
 
+    /**
+     * Send play announcement.
+     *
+     * @param timeout the timeout
+     * @param playAnnouncementArg the play announcement arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendPlayAnnouncement(long timeout, PlayAnnouncementArgWrapper playAnnouncementArg) throws Ss7WrapperException;
 
+    /**
+     * Send initial dp.
+     *
+     * @param initialDPArg the initial dp arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendInitialDP(InitialDPArgWrapper initialDPArg) throws Ss7WrapperException;
 
+    /**
+     * Send event report bcsm.
+     *
+     * @param eventReportBCSMArg the event report bcsm arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendEventReportBCSM(EventReportBCSMArgWrapper eventReportBCSMArg) throws Ss7WrapperException;
 
+    /**
+     * Send activity test.
+     *
+     * @param invoke the invoke
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendActivityTest(long invoke) throws Ss7WrapperException;
 
+    /**
+     * Send specialized resource report.
+     *
+     * @param invoke the invoke
+     * @param specializedResourceReportArg the specialized resource report arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendSpecializedResourceReport(long invoke, SpecializedResourceReportArgWrapper specializedResourceReportArg) throws Ss7WrapperException;
 
+    /**
+     * Send assist request instructions.
+     *
+     * @param assistRequestInstructionsArg the assist request instructions arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendAssistRequestInstructions(AssistRequestInstructionsArgWrapper assistRequestInstructionsArg) throws Ss7WrapperException;
 
+    /**
+     * Send call information report.
+     *
+     * @param callInformationReportArg the call information report arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendCallInformationReport(CallInformationReportArgWrapper callInformationReportArg) throws Ss7WrapperException;
 
+    /**
+     * Send furnish charging information.
+     *
+     * @param furnishChargingInformationArg the furnish charging information arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendFurnishChargingInformation(FurnishChargingInformationArgWrapper furnishChargingInformationArg) throws Ss7WrapperException;
 }

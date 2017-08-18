@@ -22,12 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.InitialDPArgWrapper;
 
+
 /**
- * InitialDPRequestEventWrapper
+ * InitialDPRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface InitialDPRequestEventWrapper extends ArgumentEventWrapper<InitialDPArgWrapper> {
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.cap.event.ArgumentEventWrapper#getArgument()
+     */
     InitialDPArgWrapper getArgument();
 }

@@ -24,18 +24,39 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 
+
 /**
- * MAPLocationInformationWrapper
+ * MAPLocationInformationWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface MAPLocationInformationWrapper extends Serializable {
 
+    /**
+     * Gets the vlr number.
+     *
+     * @return the vlr number
+     */
     ISDNAddressStringWrapper getVlrNumber();
 
+    /**
+     * Checks for vlr number.
+     *
+     * @return true, if successful
+     */
     boolean hasVlrNumber();
 
+    /**
+     * Checks for cell global id or service area id or lai.
+     *
+     * @return true, if successful
+     */
     boolean hasCellGlobalIdOrServiceAreaIdOrLAI();
 
+    /**
+     * Gets the cell global id or service area id or lai.
+     *
+     * @return the cell global id or service area id or lai
+     */
     MAPCellGlobalIdOrServiceAreaIdOrLAIWrapper getCellGlobalIdOrServiceAreaIdOrLAI();
 }

@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * CallReferenceNumberWrapper
+ * CallReferenceNumberWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CallReferenceNumberWrapper extends Serializable {
 
+    /**
+     * Gets the data.
+     *
+     * @return the data
+     */
     byte[] getData();
 }

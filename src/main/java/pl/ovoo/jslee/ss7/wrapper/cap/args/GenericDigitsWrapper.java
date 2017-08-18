@@ -24,49 +24,121 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
+
 /**
- * GenericDigitsWrapper
+ * GenericDigitsWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface GenericDigitsWrapper extends Serializable {
 
+    /**
+     * Sets the encoding scheme.
+     *
+     * @param encodingScheme the new encoding scheme
+     */
     void setEncodingScheme(EncodingScheme encodingScheme);
 
+    /**
+     * Sets the type of digits.
+     *
+     * @param typeOfDigits the new type of digits
+     */
     void setTypeOfDigits(TypeOfDigits typeOfDigits);
 
+    /**
+     * Sets the address.
+     *
+     * @param address the new address
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void setAddress(String address) throws Ss7WrapperException;
 
+    /**
+     * Gets the encoding scheme.
+     *
+     * @return the encoding scheme
+     */
     EncodingScheme getEncodingScheme();
 
+    /**
+     * Gets the type of digits.
+     *
+     * @return the type of digits
+     */
     TypeOfDigits getTypeOfDigits();
 
+    /**
+     * Gets the address.
+     *
+     * @return the address
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     String getAddress() throws Ss7WrapperException;
 
+    /**
+     * The Class TypeOfDigits.
+     */
     class TypeOfDigits {
+        
+        /** The Constant _ACCOUNT_CODE. */
         private static final int _ACCOUNT_CODE = 0;
+        
+        /** The Constant _AUTHORISATION_CODE. */
         private static final int _AUTHORISATION_CODE = 1;
+        
+        /** The Constant _TRAVELLING_CLASS_MARK. */
         private static final int _TRAVELLING_CLASS_MARK = 2;
+        
+        /** The Constant _GROUP_IDENTITY. */
         private static final int _GROUP_IDENTITY = 3;
 
+        /** The Constant ACCOUNT_CODE. */
         public static final TypeOfDigits ACCOUNT_CODE = new TypeOfDigits(_ACCOUNT_CODE);
+        
+        /** The Constant AUTHORISATION_CODE. */
         public static final TypeOfDigits AUTHORISATION_CODE = new TypeOfDigits(_AUTHORISATION_CODE);
+        
+        /** The Constant TRAVELLING_CLASS_MARK. */
         public static final TypeOfDigits TRAVELLING_CLASS_MARK = new TypeOfDigits(_TRAVELLING_CLASS_MARK);
+        
+        /** The Constant GROUP_IDENTITY. */
         public static final TypeOfDigits GROUP_IDENTITY = new TypeOfDigits(_GROUP_IDENTITY);
+        
+        /** The Constant MAX. */
         public static final int MAX = 31;
+        
+        /** The Constant MIN. */
         public static final int MIN = 0;
 
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new type of digits.
+         *
+         * @param code the code
+         */
         private TypeOfDigits(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the type of digits
+         */
         public static TypeOfDigits valueOf(int id) {
             switch (id) {
                 case _ACCOUNT_CODE: return ACCOUNT_CODE;
@@ -82,6 +154,9 @@ public interface GenericDigitsWrapper extends Serializable {
             throw new IllegalArgumentException("No matching GenericDigitsWrapper.TypeOfDigits constant for id: " + id);
         }
 
+        /* (non-Javadoc)
+         * @see java.lang.Object#equals(java.lang.Object)
+         */
         @Override
         public boolean equals(final Object o) {
             if (this == o) return true;
@@ -92,36 +167,78 @@ public interface GenericDigitsWrapper extends Serializable {
             return value == that.value;
         }
 
+        /* (non-Javadoc)
+         * @see java.lang.Object#hashCode()
+         */
         @Override
         public int hashCode() {
             return value;
         }
     }
 
+    /**
+     * The Class EncodingScheme.
+     */
     class EncodingScheme {
+        
+        /** The Constant _BCD_EVEN. */
         private static final int _BCD_EVEN = 0;
+        
+        /** The Constant _BCD_ODD. */
         private static final int _BCD_ODD = 1;
+        
+        /** The Constant _IA5. */
         private static final int _IA5 = 2;
+        
+        /** The Constant _BINARY. */
         private static final int _BINARY = 3;
 
+        /** The Constant BCD_EVEN. */
         public static final EncodingScheme BCD_EVEN = new EncodingScheme(_BCD_EVEN);
+        
+        /** The Constant BCD_ODD. */
         public static final EncodingScheme BCD_ODD = new EncodingScheme(_BCD_ODD);
+        
+        /** The Constant IA5. */
         public static final EncodingScheme IA5 = new EncodingScheme(_IA5);
+        
+        /** The Constant BINARY. */
         public static final EncodingScheme BINARY = new EncodingScheme(_BINARY);
+        
+        /** The Constant MAX. */
         public static final int MAX = 7;
+        
+        /** The Constant MIN. */
         public static final int MIN = 0;
 
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new encoding scheme.
+         *
+         * @param code the code
+         */
         private EncodingScheme(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the encoding scheme
+         */
         public static EncodingScheme valueOf(int id) {
             switch (id) {
                 case _BCD_EVEN: return BCD_EVEN;
@@ -137,6 +254,9 @@ public interface GenericDigitsWrapper extends Serializable {
             throw new IllegalArgumentException("No matching GenericDigitsWrapper.EncodingScheme constant for id: " + id);
         }
 
+        /* (non-Javadoc)
+         * @see java.lang.Object#equals(java.lang.Object)
+         */
         @Override
         public boolean equals(final Object o) {
             if (this == o) return true;
@@ -147,6 +267,9 @@ public interface GenericDigitsWrapper extends Serializable {
             return value == that.value;
         }
 
+        /* (non-Javadoc)
+         * @see java.lang.Object#hashCode()
+         */
         @Override
         public int hashCode() {
             return value;

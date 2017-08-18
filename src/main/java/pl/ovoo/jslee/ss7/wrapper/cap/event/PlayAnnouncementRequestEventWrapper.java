@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.PlayAnnouncementArgWrapper;
 
 /**
- * PlayAnnouncementRequestEventWrapper
+ * PlayAnnouncementRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

@@ -25,14 +25,38 @@ import pl.ovoo.jslee.ss7.wrapper.map.args.MtForwardShortMessageRequestWrapper;
 import pl.ovoo.jslee.ss7.wrapper.map.args.SendRoutingInfoForSMRequestArgWrapper;
 import pl.ovoo.jslee.ss7.wrapper.map.args.SendRoutingInfoForSMResponseWrapper;
 
+
 /**
  * Created by karolsimka on 26.06.17.
  */
 public interface SMSMapDialogWrapper extends MapDialogWrapper {
 
+    /**
+     * Send send routing info for sm request.
+     *
+     * @param sriTimeout the sri timeout
+     * @param arg the arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendSendRoutingInfoForSMRequest(long sriTimeout, SendRoutingInfoForSMRequestArgWrapper arg) throws Ss7WrapperException;
 
+    /**
+     * Send send routing info for sm response.
+     *
+     * @param invoke the invoke
+     * @param arg the arg
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendSendRoutingInfoForSMResponse(long invoke, SendRoutingInfoForSMResponseWrapper arg) throws Ss7WrapperException;
 
+    /**
+     * Send mt forward sm request.
+     *
+     * @param timeout the timeout
+     * @param arg the arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendMtForwardSMRequest(long timeout, MtForwardShortMessageRequestWrapper arg) throws Ss7WrapperException;
 }

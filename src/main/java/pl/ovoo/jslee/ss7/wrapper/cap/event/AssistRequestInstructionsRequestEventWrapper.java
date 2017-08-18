@@ -23,12 +23,16 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.AssistRequestInstructionsArgWrapper;
 
+
 /**
- * AssistRequestInstructionsRequestEventWrapper
+ * AssistRequestInstructionsRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface AssistRequestInstructionsRequestEventWrapper extends ArgumentEventWrapper<AssistRequestInstructionsArgWrapper> {
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.cap.event.ArgumentEventWrapper#getArgument()
+     */
     AssistRequestInstructionsArgWrapper getArgument() throws Ss7WrapperException;
 }

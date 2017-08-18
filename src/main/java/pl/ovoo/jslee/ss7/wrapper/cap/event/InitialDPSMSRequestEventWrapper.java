@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.InitialDPSMSArgWrapper;
 
+
 /**
- * InitialDPSMSRequestEventWrapper
+ * InitialDPSMSRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface InitialDPSMSRequestEventWrapper extends EventWrapper {
 
+    /**
+     * Gets the argument.
+     *
+     * @return the argument
+     */
     InitialDPSMSArgWrapper getArgument();
 }

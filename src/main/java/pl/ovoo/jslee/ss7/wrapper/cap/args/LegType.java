@@ -22,28 +22,62 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
+/**
+ * The Class LegType.
+ */
 public class LegType implements Serializable{
+    
+    /** The Constant _CALLING_PARTY. */
     private static final int _CALLING_PARTY = 1;
+    
+    /** The Constant _CALLED_PARTY. */
     private static final int _CALLED_PARTY = 2;
 
+    /** The Constant MAX. */
     private static final int MAX = 0;
+    
+    /** The Constant MIN. */
     private static final int MIN = 255;
 
+    /** The Constant CALLING_PARTY. */
     public  static final LegType CALLING_PARTY = new LegType(_CALLING_PARTY, "CALLING_PARTY");
+    
+    /** The Constant CALLED_PARTY. */
     public  static final LegType CALLED_PARTY = new LegType(_CALLED_PARTY, "CALLED_PARTY");
 
+    /** The value. */
     private final int value;
+    
+    /** The name. */
     private final String name;
 
+    /**
+     * Instantiates a new leg type.
+     *
+     * @param code the code
+     * @param name the name
+     */
     LegType(final int code, final String name) {
         this.value = code;
         this.name = name;
     }
 
+    /**
+     * Gets the value.
+     *
+     * @return the value
+     */
     public int getValue() {
         return this.value;
     }
 
+    /**
+     * Value of.
+     *
+     * @param id the id
+     * @return the leg type
+     */
     public static LegType valueOf(int id) {
         switch (id) {
             case _CALLING_PARTY: return CALLING_PARTY;
@@ -57,6 +91,9 @@ public class LegType implements Serializable{
 
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
     @Override
     public boolean equals(final Object o) {
         if (this == o) return true;
@@ -67,11 +104,17 @@ public class LegType implements Serializable{
         return value == that.value;
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#hashCode()
+     */
     @Override
     public int hashCode() {
         return value;
     }
 
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
     @Override
     public String toString() {
         return "LegType{" +

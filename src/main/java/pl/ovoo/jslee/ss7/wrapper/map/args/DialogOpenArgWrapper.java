@@ -24,14 +24,25 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.common.args.SccpAddressWrapper;
 
+
 /**
- * DialogOpenArgWrapper
+ * DialogOpenArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface DialogOpenArgWrapper extends Serializable {
 
+    /**
+     * Gets the local sccp address.
+     *
+     * @return the local sccp address
+     */
     SccpAddressWrapper getLocalSccpAddress();
 
+    /**
+     * Gets the remote sccp address.
+     *
+     * @return the remote sccp address
+     */
     SccpAddressWrapper getRemoteSccpAddress();
 }

@@ -24,13 +24,20 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
+
 /**
- * ReleaseSMSArgWrapper
+ * ReleaseSMSArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface ReleaseSMSArgWrapper extends Serializable {
 
+	/**
+	 * Gets the RP cause.
+	 *
+	 * @return the RP cause
+	 * @throws Ss7WrapperException the ss7 wrapper exception
+	 */
 	RPCauseWrapper getRPCause() throws Ss7WrapperException;
 
 

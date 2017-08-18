@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 import java.io.Serializable;
 
 /**
- * MAPSS_ForBS_CodeWrapper
+ * MAPSS_ForBS_CodeWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */

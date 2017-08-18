@@ -20,10 +20,22 @@
 
 package pl.ovoo.jslee.ss7.wrapper.map;
 
+
+/**
+ * The Enum MapApplicationContextWrapper.
+ */
 public enum MapApplicationContextWrapper {
+	
+	/** The any time info enquiry context_v3_ac. */
 	anyTimeInfoEnquiryContext_v3_ac,
+	
+	/** The any time info handling context_v3_ac. */
 	anyTimeInfoHandlingContext_v3_ac,
+	
+	/** The subscriber data mngt context_v2_ac. */
 	subscriberDataMngtContext_v2_ac,
+	
+	/** The location info retrieval context_v3_ac. */
 	locationInfoRetrievalContext_v3_ac
 	
 }

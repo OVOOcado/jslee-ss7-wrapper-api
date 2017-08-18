@@ -21,7 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 /**
- * MAPExt_ForwFeatureWrapper
+ * MAPExt_ForwFeatureWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */

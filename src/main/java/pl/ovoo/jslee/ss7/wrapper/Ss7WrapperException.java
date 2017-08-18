@@ -20,17 +20,28 @@
 
 package pl.ovoo.jslee.ss7.wrapper;
 
+
 /**
- * Ss7WrapperException
+ * Ss7WrapperException.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public class Ss7WrapperException extends Exception {
 
+    /**
+     * Instantiates a new ss7 wrapper exception.
+     *
+     * @param cause the cause
+     */
     public Ss7WrapperException(final Throwable cause) {
         super(cause);
     }
 
+    /**
+     * Instantiates a new ss7 wrapper exception.
+     *
+     * @param message the message
+     */
     public Ss7WrapperException(final String message) {
         super(message);
     }

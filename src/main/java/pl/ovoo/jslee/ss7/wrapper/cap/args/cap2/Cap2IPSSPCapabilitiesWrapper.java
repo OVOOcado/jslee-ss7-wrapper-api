@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 import java.io.Serializable;
 
 /**
- * Cap2IPSSPCapabilitiesWrapper
+ * Cap2IPSSPCapabilitiesWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

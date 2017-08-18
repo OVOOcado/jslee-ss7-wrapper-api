@@ -22,15 +22,24 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.EventSpecificInformationBCSMWrapper;
 
+
 /**
- * Cap2EventSpecificInformationBCSMWrapper
+ * Cap2EventSpecificInformationBCSMWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2EventSpecificInformationBCSMWrapper extends EventSpecificInformationBCSMWrapper {
 
+    /**
+     * The Interface Cap2TCalledPartyBusySpecificInfoWrapper.
+     */
     interface Cap2TCalledPartyBusySpecificInfoWrapper extends TCalledPartyBusySpecificInfoWrapper {
 
+        /**
+         * Gets the call forwarded present.
+         *
+         * @return the call forwarded present
+         */
         boolean getCallForwardedPresent();
 
     }

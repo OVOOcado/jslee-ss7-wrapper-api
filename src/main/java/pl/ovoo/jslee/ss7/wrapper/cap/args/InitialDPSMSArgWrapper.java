@@ -28,64 +28,202 @@ import pl.ovoo.jslee.ss7.wrapper.map.args.MAPLocationInformationWrapper;
 
 import java.io.Serializable;
 
+
 /**
- * InitialDPSMSArgWrapper
+ * InitialDPSMSArgWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface InitialDPSMSArgWrapper extends Serializable {
 
+	/**
+	 * Gets the event type sms.
+	 *
+	 * @return the event type sms
+	 */
 	EventTypeSMS getEventTypeSMS();
     
+    /**
+     * Checks for calling party number.
+     *
+     * @return true, if successful
+     */
     boolean hasCallingPartyNumber();
     
+    /**
+     * Gets the calling party number.
+     *
+     * @return the calling party number
+     */
     AddressStringWrapper getCallingPartyNumber();
     
+    /**
+     * Checks for destination subscriber number.
+     *
+     * @return true, if successful
+     */
     boolean hasDestinationSubscriberNumber();
 
+	/**
+	 * Gets the destination subscriber number.
+	 *
+	 * @return the destination subscriber number
+	 */
 	CalledPartyBCDNumberWrapper getDestinationSubscriberNumber();
     
+    /**
+     * Checks for sms reference number.
+     *
+     * @return true, if successful
+     */
     boolean hasSmsReferenceNumber();
     
+    /**
+     * Gets the sms reference number.
+     *
+     * @return the sms reference number
+     */
     CallReferenceNumberWrapper getSmsReferenceNumber();
     
+    /**
+     * Checks for location information msc.
+     *
+     * @return true, if successful
+     */
     boolean hasLocationInformationMSC();
     
+    /**
+     * Gets the location information msc.
+     *
+     * @return the location information msc
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     MAPLocationInformationWrapper getLocationInformationMSC() throws Ss7WrapperException;
     
+    /**
+     * Checks for msc address.
+     *
+     * @return true, if successful
+     */
     boolean hasMSCAddress();
 
+	/**
+	 * Gets the MSC address.
+	 *
+	 * @return the MSC address
+	 */
 	ISDNAddressStringWrapper getMSCAddress();
     
+    /**
+     * Checks for smsc address.
+     *
+     * @return true, if successful
+     */
     boolean hasSMSCAddress();
 
+	/**
+	 * Gets the SMSC address.
+	 *
+	 * @return the SMSC address
+	 */
 	ISDNAddressStringWrapper getSMSCAddress();
     
+    /**
+     * Gets the service key.
+     *
+     * @return the service key
+     */
     int getServiceKey();
     
+    /**
+     * Checks for imsi.
+     *
+     * @return true, if successful
+     */
     boolean hasIMSI();
     
+    /**
+     * Gets the imsi.
+     *
+     * @return the imsi
+     */
     IMSIAddressWrapper getIMSI();
     
+    /**
+     * Gets the time and timezone.
+     *
+     * @return the time and timezone
+     */
     TimeAndTimezoneWrapper getTimeAndTimezone();
 
+	/**
+	 * Sets the event type sms.
+	 *
+	 * @param eventTypeSMS the new event type sms
+	 */
 	void setEventTypeSMS(EventTypeSMS eventTypeSMS);
     
+	/**
+	 * Sets the calling party number.
+	 *
+	 * @param cCallingPartyNumber the new calling party number
+	 */
 	void setCallingPartyNumber(AddressStringWrapper cCallingPartyNumber);
 
+	/**
+	 * Sets the destination subscriber number.
+	 *
+	 * @param destinationSubscriberNumber the new destination subscriber number
+	 */
 	void setDestinationSubscriberNumber(CalledPartyBCDNumberWrapper destinationSubscriberNumber);
     
+	/**
+	 * Sets the sms reference number.
+	 *
+	 * @param smsReferenceNumber the new sms reference number
+	 */
 	void setSmsReferenceNumber(CallReferenceNumberWrapper smsReferenceNumber);
     
+	/**
+	 * Sets the location information msc.
+	 *
+	 * @param lLocationInformationMSC the new location information msc
+	 * @throws Ss7WrapperException the ss7 wrapper exception
+	 */
 	void setLocationInformationMSC(MAPLocationInformationWrapper lLocationInformationMSC) throws Ss7WrapperException;
 
+	/**
+	 * Sets the MSC address.
+	 *
+	 * @param mSCAddress the new MSC address
+	 */
 	void setMSCAddress(ISDNAddressStringWrapper mSCAddress);
 
+	/**
+	 * Sets the SMSC address.
+	 *
+	 * @param sMSCAddress the new SMSC address
+	 */
 	void setSMSCAddress(ISDNAddressStringWrapper sMSCAddress);
     
+	/**
+	 * Sets the service key.
+	 *
+	 * @param serviceKey the new service key
+	 */
 	void setServiceKey(int serviceKey);
         
+	/**
+	 * Sets the imsi.
+	 *
+	 * @param iMSI the new imsi
+	 */
 	void setIMSI(IMSIAddressWrapper iMSI);
     
+	/**
+	 * Sets the time and timezone.
+	 *
+	 * @param timeAndTimezone the new time and timezone
+	 */
 	void setTimeAndTimezone(TimeAndTimezoneWrapper timeAndTimezone);
 }

@@ -25,14 +25,30 @@ import java.io.Serializable;
 import pl.ovoo.jslee.ss7.wrapper.common.args.AddressStringWrapper.Nature;
 import pl.ovoo.jslee.ss7.wrapper.common.args.AddressStringWrapper.NumberingPlan;
 
+
 /**
  * Created by karolsimka on 06.06.17.
  */
 public interface RoutingInfoWrapper extends Serializable {
 
+    /**
+     * Gets the roaming number.
+     *
+     * @return the roaming number
+     */
     String getRoamingNumber();
 
+    /**
+     * Gets the numbering plan.
+     *
+     * @return the numbering plan
+     */
     NumberingPlan getNumberingPlan();
 
+    /**
+     * Gets the nature of address.
+     *
+     * @return the nature of address
+     */
     Nature getNatureOfAddress();
 }

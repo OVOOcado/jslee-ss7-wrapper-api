@@ -25,11 +25,18 @@ import java.io.Serializable;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.RequestedInformationWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 
+
 /**
- * AnyTimeInterrogationWrapper
+ * AnyTimeInterrogationWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface AnyTimeInterrogationArgWrapper extends Serializable {
+    
+    /**
+     * Gets the gsm scf.
+     *
+     * @return the gsm scf
+     */
     ISDNAddressStringWrapper getGsmScf();
 }

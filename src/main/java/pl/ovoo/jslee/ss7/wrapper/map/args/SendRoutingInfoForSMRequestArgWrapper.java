@@ -25,12 +25,23 @@ import java.io.Serializable;
 import pl.ovoo.jslee.ss7.wrapper.common.args.AddressStringWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 
+
 /**
  * Created by karolsimka on 07.06.17.
  */
 public interface SendRoutingInfoForSMRequestArgWrapper extends Serializable{
 
+    /**
+     * Gets the msisdn.
+     *
+     * @return the msisdn
+     */
     ISDNAddressStringWrapper getMsisdn();
 
+    /**
+     * Gets the sc address.
+     *
+     * @return the sc address
+     */
     AddressStringWrapper getScAddress();
 }

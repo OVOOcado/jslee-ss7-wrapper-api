@@ -26,28 +26,75 @@ import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
 import java.io.Serializable;
 
+
 /**
- * CapDialogWrapper
+ * CapDialogWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CapDialogWrapper extends Serializable {
 
+    /**
+     * Gets the activity context interface.
+     *
+     * @return the activity context interface
+     */
     ActivityContextInterface getActivityContextInterface();
 
+    /**
+     * Gets the dialog state.
+     *
+     * @return the dialog state
+     */
     DialogState getDialogState();
 
+    /**
+     * Refuse dialog.
+     *
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void refuseDialog() throws Ss7WrapperException;
 
+    /**
+     * Send close.
+     *
+     * @param b the b
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendClose(final boolean b) throws Ss7WrapperException;
 
+    /**
+     * Send user abort.
+     *
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendUserAbort() throws Ss7WrapperException;
 
+    /**
+     * Send delimiter.
+     *
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendDelimiter() throws Ss7WrapperException;
 
+    /**
+     * Accept dialog.
+     *
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void acceptDialog() throws Ss7WrapperException;
     
+    /**
+     * Gets the dialog id.
+     *
+     * @return the dialog id
+     */
     String getDialogID();
     
+    /**
+     * Gets the application context.
+     *
+     * @return the application context
+     */
     ApplicationContextWrapper getApplicationContext();
 }

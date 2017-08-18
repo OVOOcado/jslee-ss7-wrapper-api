@@ -22,16 +22,32 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Externalizable;
 
+
 /**
- * EstablishTemporaryConnectionArgWrapper
+ * EstablishTemporaryConnectionArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface EstablishTemporaryConnectionArgWrapper extends Externalizable {
 
+    /**
+     * Sets the assisting sspip routing address.
+     *
+     * @param assistingSSPIPRoutingAddress the new assisting sspip routing address
+     */
     void setAssistingSSPIPRoutingAddress(GenericNumberWrapper assistingSSPIPRoutingAddress);
 
+    /**
+     * Sets the assisting dialog correlation id.
+     *
+     * @param cginAssistingDialogCorrelationID the new assisting dialog correlation id
+     */
     void setAssistingDialogCorrelationID(GenericDigitsWrapper cginAssistingDialogCorrelationID);
 
+    /**
+     * Gets the assisting sspip routing address.
+     *
+     * @return the assisting sspip routing address
+     */
     GenericNumberWrapper getAssistingSSPIPRoutingAddress();
 }

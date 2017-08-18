@@ -22,16 +22,32 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * EventSpecificInformationSMSWrapper
+ * EventSpecificInformationSMSWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface EventSpecificInformationSMSWrapper extends Serializable{
 
+	/**
+	 * Checks if is o_sms failure specific info chosen.
+	 *
+	 * @return true, if is o_sms failure specific info chosen
+	 */
 	public boolean isO_smsFailureSpecificInfoChosen();
 
+	/**
+	 * Gets the failure cause.
+	 *
+	 * @return the failure cause
+	 */
 	public Integer getFailureCause();
 	
+	/**
+	 * Checks for failure cause.
+	 *
+	 * @return true, if successful
+	 */
 	public boolean hasFailureCause();
 }

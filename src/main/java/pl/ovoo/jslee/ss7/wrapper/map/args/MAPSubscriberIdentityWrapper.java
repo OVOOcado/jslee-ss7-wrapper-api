@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 import java.io.Serializable;
 
 /**
- * MAPSubscriberIdentityWrapper
+ * MAPSubscriberIdentityWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */

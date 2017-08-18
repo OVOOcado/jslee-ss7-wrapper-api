@@ -24,16 +24,32 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.common.args.AddressStringWrapper;
 
+
 /**
- * AnyTimeSubscriptionInterrogationArgWrapper
+ * AnyTimeSubscriptionInterrogationArgWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface AnyTimeSubscriptionInterrogationArgWrapper extends Serializable {
 
+    /**
+     * Sets the subscriber identity.
+     *
+     * @param mAPSubscriberIdentityWrapper the new subscriber identity
+     */
     void setSubscriberIdentity(MAPSubscriberIdentityWrapper mAPSubscriberIdentityWrapper);
     
+    /**
+     * Sets the requested subscription info.
+     *
+     * @param mAPRequestedSubscriptionInfoWrapper the new requested subscription info
+     */
     void setRequestedSubscriptionInfo(MAPRequestedSubscriptionInfoWrapper mAPRequestedSubscriptionInfoWrapper);
     
+    /**
+     * Sets the gsm sc f_ address.
+     *
+     * @param gsmSCF_Address the new gsm sc f_ address
+     */
     void setGsmSCF_Address(AddressStringWrapper gsmSCF_Address);
 }

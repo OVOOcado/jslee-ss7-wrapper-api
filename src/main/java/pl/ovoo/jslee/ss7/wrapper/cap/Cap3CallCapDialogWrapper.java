@@ -21,7 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.cap;
 
 /**
- * Cap2CallCapDialogWrapper
+ * Cap2CallCapDialogWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

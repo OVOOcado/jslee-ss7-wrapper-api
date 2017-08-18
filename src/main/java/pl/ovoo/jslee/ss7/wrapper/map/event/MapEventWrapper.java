@@ -22,15 +22,26 @@ package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 import pl.ovoo.jslee.ss7.wrapper.map.MapDialogWrapper;
 
+
 /**
- * MapEventWrapper
+ * MapEventWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface MapEventWrapper {
 
+    /**
+     * Gets the dialog.
+     *
+     * @return the dialog
+     */
     MapDialogWrapper getDialog();
     
+    /**
+     * Gets the invoke id.
+     *
+     * @return the invoke id
+     */
     long getInvokeId();
 
 }

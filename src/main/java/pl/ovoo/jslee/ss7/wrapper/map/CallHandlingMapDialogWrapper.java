@@ -23,15 +23,31 @@ package pl.ovoo.jslee.ss7.wrapper.map;
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 import pl.ovoo.jslee.ss7.wrapper.map.args.*;
 
+
 /**
- * CallHandlingMapDialogWrapper
+ * CallHandlingMapDialogWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CallHandlingMapDialogWrapper extends MapDialogWrapper {
     
+    /**
+     * Send send routing info request.
+     *
+     * @param sriTimeout the sri timeout
+     * @param arg the arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendSendRoutingInfoRequest(long sriTimeout, SendRoutingInfoRequestArgWrapper arg) throws Ss7WrapperException;
     
+    /**
+     * Send send routing info response.
+     *
+     * @param invoke the invoke
+     * @param arg the arg
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendSendRoutingInfoResponse(long invoke, SendRoutingInfoResponseWrapper arg) throws Ss7WrapperException;
 
 }

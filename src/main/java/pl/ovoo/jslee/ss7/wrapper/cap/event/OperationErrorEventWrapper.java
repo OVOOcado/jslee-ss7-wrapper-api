@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.ErrorComponentWrapper;
 
+
 /**
- * OperationErrorEventWrapper
+ * OperationErrorEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface OperationErrorEventWrapper extends EventWrapper {
     
+    /**
+     * Gets the operation error event.
+     *
+     * @return the operation error event
+     */
     ErrorComponentWrapper getOperationErrorEvent();
 }

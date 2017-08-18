@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * BearerCapabilityWrapper
+ * BearerCapabilityWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface BearerCapabilityWrapper extends Serializable {
 
+    /**
+     * Gets the bearer cap.
+     *
+     * @return the bearer cap
+     */
     BearerCapWrapper getBearerCap();
 }

@@ -22,18 +22,39 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * RequestedInformationWrapper
+ * RequestedInformationWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface RequestedInformationWrapper extends Serializable {
 
+    /**
+     * Checks for requested information type.
+     *
+     * @return true, if successful
+     */
     boolean hasRequestedInformationType();
 
+    /**
+     * Gets the requested information type.
+     *
+     * @return the requested information type
+     */
     RequestedInformationType getRequestedInformationType();
 
+    /**
+     * Checks for requested information value.
+     *
+     * @return true, if successful
+     */
     boolean hasRequestedInformationValue();
 
+    /**
+     * Gets the requested information value.
+     *
+     * @return the requested information value
+     */
     RequestedInformationValueWrapper getRequestedInformationValue();
 }

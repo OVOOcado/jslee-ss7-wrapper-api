@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap3;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap2.Cap2EstablishTemporaryConnectionArgWrapper;
 
 /**
- * Cap3EstablishTemporaryConnectionArgWrapper
+ * Cap3EstablishTemporaryConnectionArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

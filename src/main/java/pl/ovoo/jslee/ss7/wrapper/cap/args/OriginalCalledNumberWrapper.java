@@ -24,43 +24,114 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
+
 /**
- * OriginalCalledNumberWrapper
+ * OriginalCalledNumberWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface OriginalCalledNumberWrapper extends Serializable {
 
+    /**
+     * Checks for address.
+     *
+     * @return true, if successful
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     boolean hasAddress() throws Ss7WrapperException;
 
+    /**
+     * Checks for nature.
+     *
+     * @return true, if successful
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     boolean hasNature() throws Ss7WrapperException;
 
+    /**
+     * Checks for numbering plan.
+     *
+     * @return true, if successful
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     boolean hasNumberingPlan() throws Ss7WrapperException;
 
+    /**
+     * Gets the address.
+     *
+     * @return the address
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     String getAddress() throws Ss7WrapperException;
 
+    /**
+     * Gets the presentation.
+     *
+     * @return the presentation
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     Presentation getPresentation() throws Ss7WrapperException;
 
+    /**
+     * Gets the nature.
+     *
+     * @return the nature
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     Nature getNature() throws Ss7WrapperException;
 
+    /**
+     * Gets the numbering plan.
+     *
+     * @return the numbering plan
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     NumberingPlan getNumberingPlan() throws Ss7WrapperException;
 
+    /**
+     * The Enum Presentation.
+     */
     enum Presentation {
+        
+        /** The allowed. */
         ALLOWED(0),
+        
+        /** The restricted. */
         RESTRICTED(1),
+        
+        /** The address not available. */
         ADDRESS_NOT_AVAILABLE(2),
+        
+        /** The network restricted. */
         NETWORK_RESTRICTED(3);
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new presentation.
+         *
+         * @param code the code
+         */
         Presentation(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the presentation
+         */
         public static Presentation valueOf(int id) {
             for (Presentation m : values()) {
                 if (m.value == id) {
@@ -71,26 +142,62 @@ public interface OriginalCalledNumberWrapper extends Serializable {
         }
     }
 
+    /**
+     * The Enum NumberingPlan.
+     */
     enum NumberingPlan {
+        
+        /** The SPAR e_0. */
         SPARE_0(0),
+        
+        /** The isdn. */
         ISDN(1),
+        
+        /** The SPAR e_2. */
         SPARE_2(2),
+        
+        /** The data. */
         DATA(3),
+        
+        /** The telex. */
         TELEX(4),
+        
+        /** The RESERVE d_5. */
         RESERVED_5(5),
+        
+        /** The RESERVE d_6. */
         RESERVED_6(6),
+        
+        /** The SPAR e_7. */
         SPARE_7(7);
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new numbering plan.
+         *
+         * @param code the code
+         */
         NumberingPlan(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the numbering plan
+         */
         public static NumberingPlan valueOf(int id) {
             for (NumberingPlan m : values()) {
                 if (m.value == id) {
@@ -101,30 +208,69 @@ public interface OriginalCalledNumberWrapper extends Serializable {
         }
     }
 
+    /**
+     * The Class Nature.
+     */
     class Nature {
+        
+        /** The Constant _SUBSCRIBER. */
         private static final int _SUBSCRIBER = 1;
+        
+        /** The Constant _UNKNOWN. */
         private static final int _UNKNOWN = 2;
+        
+        /** The Constant _NATIONAL. */
         private static final int _NATIONAL = 3;
+        
+        /** The Constant _INTERNATIONAL. */
         private static final int _INTERNATIONAL = 4;
 
+        /** The Constant SUBSCRIBER. */
         public static final Nature SUBSCRIBER = new Nature(_SUBSCRIBER);
+        
+        /** The Constant UNKNOWN. */
         public static final Nature UNKNOWN = new Nature(_UNKNOWN);
+        
+        /** The Constant NATIONAL. */
         public static final Nature NATIONAL = new Nature(_NATIONAL);
+        
+        /** The Constant INTERNATIONAL. */
         public static final Nature INTERNATIONAL = new Nature(_INTERNATIONAL);
+        
+        /** The Constant MAX. */
         public static final int MAX = 127;
+        
+        /** The Constant MIN. */
         public static final int MIN = 0;
 
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new nature.
+         *
+         * @param code the code
+         */
         private Nature(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the nature
+         */
         public static Nature valueOf(int id) {
             switch (id) {
                 case _SUBSCRIBER: return SUBSCRIBER;
@@ -140,6 +286,9 @@ public interface OriginalCalledNumberWrapper extends Serializable {
             throw new IllegalArgumentException("No matching OriginalCalledNumberWrapper.Nature constant for id: " + id);
         }
 
+        /* (non-Javadoc)
+         * @see java.lang.Object#equals(java.lang.Object)
+         */
         @Override
         public boolean equals(final Object o) {
             if (this == o) return true;
@@ -150,6 +299,9 @@ public interface OriginalCalledNumberWrapper extends Serializable {
             return value == that.value;
         }
 
+        /* (non-Javadoc)
+         * @see java.lang.Object#hashCode()
+         */
         @Override
         public int hashCode() {
             return value;

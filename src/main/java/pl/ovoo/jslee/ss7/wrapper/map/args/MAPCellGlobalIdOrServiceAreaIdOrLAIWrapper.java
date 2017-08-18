@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 import java.io.Serializable;
 
+
 /**
- * MAPCellGlobalIdOrServiceAreaIdOrLAIWrapper
+ * MAPCellGlobalIdOrServiceAreaIdOrLAIWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface MAPCellGlobalIdOrServiceAreaIdOrLAIWrapper extends Serializable {
 
+    /**
+     * Checks if is cell global id or service area id fixed length chosen.
+     *
+     * @return true, if is cell global id or service area id fixed length chosen
+     */
     boolean isCellGlobalIdOrServiceAreaIdFixedLengthChosen();
 
+    /**
+     * Gets the cell global id or service area id fixed length.
+     *
+     * @return the cell global id or service area id fixed length
+     */
     CellGlobalIdWrapper getCellGlobalIdOrServiceAreaIdFixedLength();
 }

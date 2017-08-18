@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import java.io.Serializable;
 
+
 /**
- * Cap2ReleaseIfDurationExceededWrapper
+ * Cap2ReleaseIfDurationExceededWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2ReleaseIfDurationExceededWrapper extends Serializable {
 
+    /**
+     * Gets the tone.
+     *
+     * @return the tone
+     */
     boolean getTone();
 }

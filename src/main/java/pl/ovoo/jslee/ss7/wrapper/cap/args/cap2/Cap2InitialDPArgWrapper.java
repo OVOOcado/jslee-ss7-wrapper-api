@@ -23,15 +23,26 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.TimeAndTimezoneWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap1.Cap1InitialDPArgWrapper;
 
+
 /**
- * Cap2InitialDPArgWrapper
+ * Cap2InitialDPArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2InitialDPArgWrapper extends Cap1InitialDPArgWrapper {
 
+    /**
+     * Gets the time and timezone.
+     *
+     * @return the time and timezone
+     */
     TimeAndTimezoneWrapper getTimeAndTimezone();
 
+    /**
+     * Sets the time and timezone.
+     *
+     * @param timeAndTimezone the new time and timezone
+     */
     void setTimeAndTimezone(TimeAndTimezoneWrapper timeAndTimezone);
 
 }

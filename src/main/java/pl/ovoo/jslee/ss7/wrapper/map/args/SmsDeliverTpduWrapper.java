@@ -25,12 +25,23 @@ import java.io.Serializable;
 import pl.ovoo.jslee.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.SmDeliveryOutcome;
 
+
 /**
  * Created by karolsimka on 09.06.17.
  */
 public interface SmsDeliverTpduWrapper extends Serializable {
 
+    /**
+     * Gets the msisdn.
+     *
+     * @return the msisdn
+     */
     ISDNAddressStringWrapper getMsisdn();
 
+    /**
+     * Gets the outcome.
+     *
+     * @return the outcome
+     */
     SmDeliveryOutcome getOutcome();
 }

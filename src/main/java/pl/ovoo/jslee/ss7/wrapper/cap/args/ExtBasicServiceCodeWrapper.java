@@ -22,17 +22,39 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * ExtBasicServiceCodeWrapper
+ * ExtBasicServiceCodeWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface ExtBasicServiceCodeWrapper extends Serializable {
 
+    /**
+     * Checks if is ext bearer service chosen.
+     *
+     * @return true, if is ext bearer service chosen
+     */
     boolean isExtBearerServiceChosen();
 
+    /**
+     * Checks if is ext teleservice chosen.
+     *
+     * @return true, if is ext teleservice chosen
+     */
     boolean isExtTeleserviceChosen();
 
+    /**
+     * Gets the ext bearer service code.
+     *
+     * @return the ext bearer service code
+     */
     ExtBearerServiceCodeWrapper getExtBearerServiceCode();
+    
+    /**
+     * Gets the ext teleservice code.
+     *
+     * @return the ext teleservice code
+     */
     ExtTeleserviceCodeWrapper getExtTeleserviceCode();
 }

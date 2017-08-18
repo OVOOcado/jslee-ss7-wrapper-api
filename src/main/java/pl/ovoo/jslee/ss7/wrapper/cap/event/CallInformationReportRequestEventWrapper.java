@@ -22,12 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.CallInformationReportArgWrapper;
 
+
 /**
- * CallInformationReportRequestEventWrapper
+ * CallInformationReportRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CallInformationReportRequestEventWrapper extends ArgumentEventWrapper<CallInformationReportArgWrapper> {
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.cap.event.ArgumentEventWrapper#getArgument()
+     */
     CallInformationReportArgWrapper getArgument();
 }

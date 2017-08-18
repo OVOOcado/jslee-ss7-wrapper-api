@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 import java.io.Serializable;
 
 /**
- * InsertSubscriberDataArg_v1Wrapper
+ * InsertSubscriberDataArg_v1Wrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */

@@ -22,9 +22,14 @@ package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 import pl.ovoo.jslee.ss7.wrapper.map.args.MtForwardSMResponseWrapper;
 
+
 /**
  * Created by karolsimka on 09.06.17.
  */
 public interface MtForwardSMResponseEventWrapper extends MapArgumentEventWrapper<MtForwardSMResponseWrapper> {
+    
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.map.event.MapArgumentEventWrapper#getArgument()
+     */
     MtForwardSMResponseWrapper getArgument();
 }

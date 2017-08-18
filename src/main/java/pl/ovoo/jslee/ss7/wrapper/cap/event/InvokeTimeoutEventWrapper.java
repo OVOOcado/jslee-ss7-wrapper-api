@@ -21,7 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 /**
- * InvokeTimeoutEventWrapper
+ * InvokeTimeoutEventWrapper.
  *
  * @author adam.skimina@ovoo.pl
  */

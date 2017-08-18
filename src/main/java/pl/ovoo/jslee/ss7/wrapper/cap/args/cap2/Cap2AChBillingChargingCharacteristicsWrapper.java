@@ -22,19 +22,45 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.AChBillingChargingCharacteristicsWrapper;
 
+
 /**
- * Cap2AChBillingChargingCharacteristicsWrapper
+ * Cap2AChBillingChargingCharacteristicsWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2AChBillingChargingCharacteristicsWrapper extends AChBillingChargingCharacteristicsWrapper {
 
+    /**
+     * Gets the time duration charging.
+     *
+     * @return the time duration charging
+     */
     Cap2TimeDurationChargingWrapper getTimeDurationCharging();
 
+    /**
+     * The Interface Cap2TimeDurationChargingWrapper.
+     */
     interface Cap2TimeDurationChargingWrapper {
 
+        /**
+         * Gets the max call period duration.
+         *
+         * @return the max call period duration
+         */
         long getMaxCallPeriodDuration();
+        
+        /**
+         * Gets the release if duration exceeded.
+         *
+         * @return the release if duration exceeded
+         */
         Cap2ReleaseIfDurationExceededWrapper getReleaseIfDurationExceeded();
+        
+        /**
+         * Gets the tariff switch interval.
+         *
+         * @return the tariff switch interval
+         */
         Long getTariffSwitchInterval();
 
     }

@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap3;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap2.Cap2FurnishChargingInformationArgWrapper;
 
 /**
- * Cap3FurnishChargingInformationArgWrapper
+ * Cap3FurnishChargingInformationArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

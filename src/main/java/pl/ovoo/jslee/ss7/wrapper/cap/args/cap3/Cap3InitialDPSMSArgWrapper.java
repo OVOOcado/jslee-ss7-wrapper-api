@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap3;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.InitialDPSMSArgWrapper;
 
 /**
- * Cap3InitialDPSMSArgWrapper
+ * Cap3InitialDPSMSArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

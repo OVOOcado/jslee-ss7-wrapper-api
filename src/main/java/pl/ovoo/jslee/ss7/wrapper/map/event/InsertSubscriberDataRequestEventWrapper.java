@@ -22,12 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 import pl.ovoo.jslee.ss7.wrapper.map.args.InsertSubscriberDataArg_v1Wrapper;
 
+
 /**
- * InsertSubscriberDataRequestEventWrapper
+ * InsertSubscriberDataRequestEventWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface InsertSubscriberDataRequestEventWrapper extends MapArgumentEventWrapper<InsertSubscriberDataArg_v1Wrapper> {
 
+	/* (non-Javadoc)
+	 * @see pl.ovoo.jslee.ss7.wrapper.map.event.MapArgumentEventWrapper#getArgument()
+	 */
 	InsertSubscriberDataArg_v1Wrapper getArgument();
 }

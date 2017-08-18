@@ -22,12 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.ApplyChargingReportArgWrapper;
 
+
 /**
- * ApplyChargingReportRequestEventWrapper
+ * ApplyChargingReportRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface ApplyChargingReportRequestEventWrapper extends ArgumentEventWrapper<ApplyChargingReportArgWrapper> {
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.cap.event.ArgumentEventWrapper#getArgument()
+     */
     ApplyChargingReportArgWrapper getArgument();
 }

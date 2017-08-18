@@ -24,47 +24,126 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
+
 /**
- * CalledPartyNumberWrapper
+ * CalledPartyNumberWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CalledPartyNumberWrapper extends Serializable {
 
+    /**
+     * Gets the address.
+     *
+     * @return the address
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     String getAddress() throws Ss7WrapperException;
 
+    /**
+     * Gets the nature.
+     *
+     * @return the nature
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     Nature getNature() throws Ss7WrapperException;
 
+    /**
+     * Gets the numbering plan.
+     *
+     * @return the numbering plan
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     NumberingPlan getNumberingPlan() throws Ss7WrapperException;
 
+    /**
+     * Checks for address.
+     *
+     * @return true, if successful
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     boolean hasAddress() throws Ss7WrapperException;
 
+    /**
+     * Checks for nature.
+     *
+     * @return true, if successful
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     boolean hasNature() throws Ss7WrapperException;
 
+    /**
+     * Checks for numbering plan.
+     *
+     * @return true, if successful
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     boolean hasNumberingPlan() throws Ss7WrapperException;
 
+    /**
+     * Gets the routing to internal network number.
+     *
+     * @return the routing to internal network number
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     RoutingToInternalNetworkNumber getRoutingToInternalNetworkNumber() throws Ss7WrapperException;
 
+    /**
+     * The Enum NumberingPlan.
+     */
     enum NumberingPlan {
+        
+        /** The SPAR e_0. */
         SPARE_0(0),
+        
+        /** The isdn. */
         ISDN(1),
+        
+        /** The SPAR e_2. */
         SPARE_2(2),
+        
+        /** The data. */
         DATA(3),
+        
+        /** The telex. */
         TELEX(4),
+        
+        /** The NATIONA l_5. */
         NATIONAL_5(5),
+        
+        /** The NATIONA l_6. */
         NATIONAL_6(6),
+        
+        /** The SPAR e_7. */
         SPARE_7(7);
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new numbering plan.
+         *
+         * @param code the code
+         */
         NumberingPlan(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the numbering plan
+         */
         public static NumberingPlan valueOf(int id) {
             for (NumberingPlan m : values()) {
                 if (m.value == id) {
@@ -75,20 +154,44 @@ public interface CalledPartyNumberWrapper extends Serializable {
         }
     }
 
+    /**
+     * The Enum RoutingToInternalNetworkNumber.
+     */
     enum RoutingToInternalNetworkNumber {
+        
+        /** The allowed. */
         ALLOWED(0),
+        
+        /** The not allowed. */
         NOT_ALLOWED(1);
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new routing to internal network number.
+         *
+         * @param code the code
+         */
         RoutingToInternalNetworkNumber(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the routing to internal network number
+         */
         public static RoutingToInternalNetworkNumber valueOf(int id) {
             for (RoutingToInternalNetworkNumber m : values()) {
                 if (m.value == id) {
@@ -99,38 +202,93 @@ public interface CalledPartyNumberWrapper extends Serializable {
         }
     }
 
+    /**
+     * The Class Nature.
+     */
     class Nature {
+        
+        /** The Constant _SUBSCRIBER. */
         private static final int _SUBSCRIBER = 1;
+        
+        /** The Constant _UNKNOWN. */
         private static final int _UNKNOWN = 2;
+        
+        /** The Constant _NATIONAL. */
         private static final int _NATIONAL = 3;
+        
+        /** The Constant _INTERNATIONAL. */
         private static final int _INTERNATIONAL = 4;
+        
+        /** The Constant _NETWORK_SPECIFIC. */
         private static final int _NETWORK_SPECIFIC = 5;
+        
+        /** The Constant _NETWORK_ROUTING_NATIONAL. */
         private static final int _NETWORK_ROUTING_NATIONAL = 6;
+        
+        /** The Constant _NETWORK_ROUTING_NETWORK_SPECIFIC. */
         private static final int _NETWORK_ROUTING_NETWORK_SPECIFIC = 7;
+        
+        /** The Constant _NETWORK_ROUTING_WITH_CALLED_DIRECTORY. */
         private static final int _NETWORK_ROUTING_WITH_CALLED_DIRECTORY = 8;
 
+        /** The Constant SUBSCRIBER. */
         public static final Nature SUBSCRIBER = new Nature(_SUBSCRIBER);
+        
+        /** The Constant UNKNOWN. */
         public static final Nature UNKNOWN = new Nature(_UNKNOWN);
+        
+        /** The Constant NATIONAL. */
         public static final Nature NATIONAL = new Nature(_NATIONAL);
+        
+        /** The Constant INTERNATIONAL. */
         public static final Nature INTERNATIONAL = new Nature(_INTERNATIONAL);
+        
+        /** The Constant NETWORK_SPECIFIC. */
         public static final Nature NETWORK_SPECIFIC = new Nature(_NETWORK_SPECIFIC);
+        
+        /** The Constant NETWORK_ROUTING_NATIONAL. */
         public static final Nature NETWORK_ROUTING_NATIONAL = new Nature(_NETWORK_ROUTING_NATIONAL);
+        
+        /** The Constant NETWORK_ROUTING_NETWORK_SPECIFIC. */
         public static final Nature NETWORK_ROUTING_NETWORK_SPECIFIC = new Nature(_NETWORK_ROUTING_NETWORK_SPECIFIC);
+        
+        /** The Constant NETWORK_ROUTING_WITH_CALLED_DIRECTORY. */
         public static final Nature NETWORK_ROUTING_WITH_CALLED_DIRECTORY = new Nature(_NETWORK_ROUTING_WITH_CALLED_DIRECTORY);
+        
+        /** The Constant MAX. */
         public static final int MAX = 127;
+        
+        /** The Constant MIN. */
         public static final int MIN = 0;
 
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new nature.
+         *
+         * @param code the code
+         */
         private Nature(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the nature
+         */
         public static Nature valueOf(int id) {
             switch (id) {
                 case _SUBSCRIBER: return SUBSCRIBER;
@@ -150,6 +308,9 @@ public interface CalledPartyNumberWrapper extends Serializable {
             throw new IllegalArgumentException("No matching CalledPartyNumberWrapper.Nature constant for id: " + id);
         }
 
+        /* (non-Javadoc)
+         * @see java.lang.Object#equals(java.lang.Object)
+         */
         @Override
         public boolean equals(final Object o) {
             if (this == o) return true;
@@ -160,6 +321,9 @@ public interface CalledPartyNumberWrapper extends Serializable {
             return value == that.value;
         }
 
+        /* (non-Javadoc)
+         * @see java.lang.Object#hashCode()
+         */
         @Override
         public int hashCode() {
             return value;

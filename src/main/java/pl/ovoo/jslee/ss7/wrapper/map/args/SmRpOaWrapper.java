@@ -24,10 +24,16 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 
+
 /**
  * Created by karolsimka on 03.07.17.
  */
 public interface SmRpOaWrapper extends Serializable{
 
+    /**
+     * Gets the service centre address oa.
+     *
+     * @return the service centre address oa
+     */
     ISDNAddressStringWrapper getServiceCentreAddressOA();
 }

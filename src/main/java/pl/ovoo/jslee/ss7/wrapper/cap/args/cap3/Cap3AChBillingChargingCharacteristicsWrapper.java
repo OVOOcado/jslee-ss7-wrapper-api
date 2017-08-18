@@ -22,17 +22,27 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap3;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap2.Cap2AChBillingChargingCharacteristicsWrapper;
 
+
 /**
- * Cap2AChBillingChargingCharacteristicsWrapper
+ * Cap2AChBillingChargingCharacteristicsWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap3AChBillingChargingCharacteristicsWrapper extends Cap2AChBillingChargingCharacteristicsWrapper {
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.cap.args.cap2.Cap2AChBillingChargingCharacteristicsWrapper#getTimeDurationCharging()
+     */
     Cap3TimeDurationChargingWrapper getTimeDurationCharging();
 
+    /**
+     * The Interface Cap3TimeDurationChargingWrapper.
+     */
     interface Cap3TimeDurationChargingWrapper extends Cap2TimeDurationChargingWrapper {
 
+        /* (non-Javadoc)
+         * @see pl.ovoo.jslee.ss7.wrapper.cap.args.cap2.Cap2AChBillingChargingCharacteristicsWrapper.Cap2TimeDurationChargingWrapper#getReleaseIfDurationExceeded()
+         */
         Cap3ReleaseIfDurationExceededWrapper getReleaseIfDurationExceeded();
 
     }

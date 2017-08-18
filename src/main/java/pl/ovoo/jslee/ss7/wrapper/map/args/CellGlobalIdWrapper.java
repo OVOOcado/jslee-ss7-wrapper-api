@@ -24,26 +24,71 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
+
 /**
- * CellGlobalIdWrapper
+ * CellGlobalIdWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CellGlobalIdWrapper extends Serializable {
 
+    /**
+     * Checks for mobile country code.
+     *
+     * @return true, if successful
+     */
     boolean hasMobileCountryCode();
 
+    /**
+     * Gets the mobile country code.
+     *
+     * @return the mobile country code
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     String getMobileCountryCode() throws Ss7WrapperException;
 
+    /**
+     * Checks for mobile network code.
+     *
+     * @return true, if successful
+     */
     boolean hasMobileNetworkCode();
 
+    /**
+     * Gets the mobile network code.
+     *
+     * @return the mobile network code
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     String getMobileNetworkCode() throws Ss7WrapperException;
 
+    /**
+     * Checks for cell id.
+     *
+     * @return true, if successful
+     */
     boolean hasCellId();
 
+    /**
+     * Gets the cell id.
+     *
+     * @return the cell id
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int getCellId() throws Ss7WrapperException;
 
+    /**
+     * Checks for location area code.
+     *
+     * @return true, if successful
+     */
     boolean hasLocationAreaCode();
 
+    /**
+     * Gets the location area code.
+     *
+     * @return the location area code
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int getLocationAreaCode() throws Ss7WrapperException;
 }

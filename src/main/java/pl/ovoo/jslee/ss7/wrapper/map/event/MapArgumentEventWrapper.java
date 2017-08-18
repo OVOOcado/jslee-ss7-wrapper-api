@@ -22,12 +22,20 @@ package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
+
 /**
- * MapArgumentEventWrapper
+ * MapArgumentEventWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
+ * @param <A> the generic type
  */
 public interface MapArgumentEventWrapper<A> extends MapEventWrapper {
 
+    /**
+     * Gets the argument.
+     *
+     * @return the argument
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     A getArgument()  throws Ss7WrapperException;
 }

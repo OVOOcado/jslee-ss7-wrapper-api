@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 import java.io.Externalizable;
 
+
 /**
- * AnyTimeInterrogationResultWrapper
+ * AnyTimeInterrogationResultWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface AnyTimeInterrogationResultWrapper extends Externalizable {
 
+	/**
+	 * Gets the subscriber info.
+	 *
+	 * @return the subscriber info
+	 */
 	MAPSubscriberInfoWrapper getSubscriberInfo();
 	
+	/**
+	 * Checks for subscriber info.
+	 *
+	 * @return true, if successful
+	 */
 	boolean hasSubscriberInfo();
 }

@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import java.io.Serializable;
 
+
 /**
- * Cap2DPSpecificCriteriaWrapper
+ * Cap2DPSpecificCriteriaWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2DPSpecificCriteriaWrapper extends Serializable {
 
+    /**
+     * Gets the application timer.
+     *
+     * @return the application timer
+     */
     int getApplicationTimer();
 }

@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * PlayAnnouncementArgWrapper
+ * PlayAnnouncementArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface PlayAnnouncementArgWrapper extends Serializable {
 
+    /**
+     * Sets the request announcement complete.
+     *
+     * @param value the new request announcement complete
+     */
     void setRequestAnnouncementComplete(Boolean value);
 
+    /**
+     * Sets the information to send.
+     *
+     * @param informationToSend the new information to send
+     */
     void setInformationToSend(InformationToSendWrapper informationToSend);
 }

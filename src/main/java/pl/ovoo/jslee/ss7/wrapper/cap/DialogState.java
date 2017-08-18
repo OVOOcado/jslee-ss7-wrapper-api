@@ -20,9 +20,21 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap;
 
+
+/**
+ * The Enum DialogState.
+ */
 public enum DialogState {
+    
+    /** The idle. */
     IDLE,
+    
+    /** The init sent. */
     INIT_SENT,
+    
+    /** The init received. */
     INIT_RECEIVED,
+    
+    /** The active. */
     ACTIVE
 }

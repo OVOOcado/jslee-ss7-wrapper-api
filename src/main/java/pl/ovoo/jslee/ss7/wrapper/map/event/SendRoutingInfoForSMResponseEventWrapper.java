@@ -22,10 +22,14 @@ package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 import pl.ovoo.jslee.ss7.wrapper.map.args.SendRoutingInfoForSMResponseWrapper;
 
+
 /**
  * Created by karolsimka on 07.06.17.
  */
 public interface SendRoutingInfoForSMResponseEventWrapper extends MapArgumentEventWrapper<SendRoutingInfoForSMResponseWrapper> {
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.map.event.MapArgumentEventWrapper#getArgument()
+     */
     SendRoutingInfoForSMResponseWrapper getArgument();
 }

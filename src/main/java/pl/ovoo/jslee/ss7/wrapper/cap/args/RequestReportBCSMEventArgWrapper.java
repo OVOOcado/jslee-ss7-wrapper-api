@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * RequestReportBCSMEventArgWrapper
+ * RequestReportBCSMEventArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface RequestReportBCSMEventArgWrapper extends Serializable {
 
+    /**
+     * Sets the bcsm events.
+     *
+     * @param bcsmEvents the new bcsm events
+     */
     void setBcsmEvents(BCSMEventWrapper[] bcsmEvents);
 
+    /**
+     * Gets the bcsm events.
+     *
+     * @return the bcsm events
+     */
     BCSMEventWrapper[] getBcsmEvents();
 }

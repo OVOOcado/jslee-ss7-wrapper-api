@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import java.io.Serializable;
 
+
 /**
- * Cap2TimeInformationWrapper
+ * Cap2TimeInformationWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2TimeInformationWrapper extends Serializable {
 
+    /**
+     * Checks if is time if no tariff switch chosen.
+     *
+     * @return true, if is time if no tariff switch chosen
+     */
     boolean isTimeIfNoTariffSwitchChosen();
 
+    /**
+     * Gets the time if no tariff switch.
+     *
+     * @return the time if no tariff switch
+     */
     Integer getTimeIfNoTariffSwitch();
 }

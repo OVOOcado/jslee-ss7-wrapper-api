@@ -22,18 +22,39 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * LegIDWrapper
+ * LegIDWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface LegIDWrapper extends Serializable {
 
+    /**
+     * Gets the receiving side id.
+     *
+     * @return the receiving side id
+     */
     LegType getReceivingSideID();
 
+    /**
+     * Gets the sending side id.
+     *
+     * @return the sending side id
+     */
     LegType getSendingSideID();
 
+    /**
+     * Checks if is receiving side id chosen.
+     *
+     * @return true, if is receiving side id chosen
+     */
     boolean isReceivingSideIDChosen();
 
+    /**
+     * Checks if is sending side id chosen.
+     *
+     * @return true, if is sending side id chosen
+     */
     boolean isSendingSideIDChosen();
 }

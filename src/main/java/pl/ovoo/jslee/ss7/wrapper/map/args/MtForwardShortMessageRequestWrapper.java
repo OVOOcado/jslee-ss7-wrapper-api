@@ -23,14 +23,30 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 import java.io.Serializable;
 
 
+
 /**
  * Created by karolsimka on 08.06.17.
  */
 public interface MtForwardShortMessageRequestWrapper extends Serializable {
 
+    /**
+     * Gets the sm_ rp_ da.
+     *
+     * @return the sm_ rp_ da
+     */
     SmRpDaWrapper getSm_Rp_Da();
 
+    /**
+     * Gets the sm_ rp_ ui.
+     *
+     * @return the sm_ rp_ ui
+     */
     SmRpUiWrapper getSm_Rp_Ui();
 
+    /**
+     * Gets the sm_ rp_ oa.
+     *
+     * @return the sm_ rp_ oa
+     */
     SmRpOaWrapper getSm_Rp_Oa();
 }

@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * CallInformationReportArgWrapper
+ * CallInformationReportArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CallInformationReportArgWrapper extends Serializable {
 
+    /**
+     * Gets the requested information list.
+     *
+     * @return the requested information list
+     */
     RequestedInformationWrapper[] getRequestedInformationList();
 
+    /**
+     * Sets the requested information list.
+     *
+     * @param requestedInformationList the new requested information list
+     */
     void setRequestedInformationList(RequestedInformationWrapper[] requestedInformationList);
 }

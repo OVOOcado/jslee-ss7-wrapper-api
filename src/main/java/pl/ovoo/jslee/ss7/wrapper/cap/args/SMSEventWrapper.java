@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * SMSEventWrapper
+ * SMSEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface SMSEventWrapper extends Serializable{
 
+    /**
+     * Gets the event type sms.
+     *
+     * @return the event type sms
+     */
     EventTypeSMS getEventTypeSMS();
 
+    /**
+     * Gets the monitor mode.
+     *
+     * @return the monitor mode
+     */
     MonitorMode getMonitorMode();
 }

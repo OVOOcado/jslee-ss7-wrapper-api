@@ -22,16 +22,32 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.ApplyChargingReportArgWrapper;
 
+
 /**
- * Cap2ApplyChargingReportArgWrapper
+ * Cap2ApplyChargingReportArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2ApplyChargingReportArgWrapper extends ApplyChargingReportArgWrapper{
 
+    /**
+     * Checks if is time duration charging result chosen.
+     *
+     * @return true, if is time duration charging result chosen
+     */
     boolean isTimeDurationChargingResultChosen();
 
+    /**
+     * Gets the time duration charging result.
+     *
+     * @return the time duration charging result
+     */
     Cap2TimeDurationChargingResultWrapper getTimeDurationChargingResult();
 
+    /**
+     * Sets the time duration charging result.
+     *
+     * @param timeDurationChargingResult the new time duration charging result
+     */
     void setTimeDurationChargingResult(Cap2TimeDurationChargingResultWrapper timeDurationChargingResult);
 }

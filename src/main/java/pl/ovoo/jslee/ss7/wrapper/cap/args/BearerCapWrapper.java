@@ -24,18 +24,42 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
+
 /**
- * BearerCapabilityWrapper
+ * BearerCapabilityWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface BearerCapWrapper extends Serializable {
 
+    /**
+     * Checks if is IT u_ t chosen.
+     *
+     * @return true, if is IT u_ t chosen
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     boolean isITU_TChosen() throws Ss7WrapperException;
 
+    /**
+     * Checks if is checks if is o_ iec chosen.
+     *
+     * @return true, if is checks if is o_ iec chosen
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     boolean isISO_IECChosen() throws Ss7WrapperException;
 
+    /**
+     * Gets the IT u_ t user service information.
+     *
+     * @return the IT u_ t user service information
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     ITU_TUserServiceInformationWrapper getITU_TUserServiceInformation() throws Ss7WrapperException;
 
+    /**
+     * Gets the iso iec.
+     *
+     * @return the iso iec
+     */
     byte[] getISO_IEC();
 }

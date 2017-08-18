@@ -26,8 +26,8 @@
 package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 /**
- * InvokeTimeoutEventWrapper
- * 
+ * InvokeTimeoutEventWrapper.
+ *
  * @author adam.skimina@ovoo.pl
  */
 public interface InvokeTimeoutEventWrapper extends MapEventWrapper {

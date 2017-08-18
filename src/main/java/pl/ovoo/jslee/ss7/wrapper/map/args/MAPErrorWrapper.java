@@ -22,11 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 import java.io.Serializable;
 
+
 /**
- * MAPErrorWrapper
+ * MAPErrorWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface MAPErrorWrapper extends Serializable {
+    
+    /**
+     * Gets the map error message.
+     *
+     * @return the map error message
+     */
     MAPErrorMessageWrapper getMapErrorMessage();
 }

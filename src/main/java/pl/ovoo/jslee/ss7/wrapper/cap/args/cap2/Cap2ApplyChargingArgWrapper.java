@@ -22,13 +22,19 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.ApplyChargingArgWrapper;
 
+
 /**
- * ApplyChargingArgWrapper
+ * ApplyChargingArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2ApplyChargingArgWrapper extends ApplyChargingArgWrapper {
 
+    /**
+     * Gets the a ch billing charging characteristics.
+     *
+     * @return the a ch billing charging characteristics
+     */
     Cap2AChBillingChargingCharacteristicsWrapper getAChBillingChargingCharacteristics();
 
 

@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 import java.io.Serializable;
 
 /**
- * AChBillingChargingCharacteristicsWrapper
+ * AChBillingChargingCharacteristicsWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

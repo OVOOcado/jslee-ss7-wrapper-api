@@ -20,12 +20,18 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
+
 /**
- * DialogUserAbortEventWrapper
+ * DialogUserAbortEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface DialogUserAbortEventWrapper extends EventWrapper {
 	
+	/**
+	 * Gets the user information.
+	 *
+	 * @return the user information
+	 */
 	Object[] getUserInformation();
 }

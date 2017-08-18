@@ -20,6 +20,10 @@
 
 package pl.ovoo.jslee.ss7.wrapper.exception;
 
+
+/**
+ * The Class OcProtocolException.
+ */
 public class OcProtocolException extends Exception {
 
 	/** The Constant serialVersionUID. */

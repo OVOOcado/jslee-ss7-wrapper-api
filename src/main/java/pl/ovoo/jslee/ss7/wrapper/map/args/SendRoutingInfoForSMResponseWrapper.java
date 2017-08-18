@@ -25,12 +25,23 @@ import java.io.Serializable;
 import pl.ovoo.jslee.ss7.wrapper.common.args.IMSIAddressWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 
+
 /**
  * Created by karolsimka on 07.06.17.
  */
 public interface SendRoutingInfoForSMResponseWrapper extends Serializable {
 
+    /**
+     * Gets the imsi.
+     *
+     * @return the imsi
+     */
     IMSIAddressWrapper getIMSI();
 
+    /**
+     * Gets the msc address.
+     *
+     * @return the msc address
+     */
     ISDNAddressStringWrapper getMscAddress();
 }

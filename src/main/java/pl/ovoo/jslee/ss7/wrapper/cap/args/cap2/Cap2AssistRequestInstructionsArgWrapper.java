@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.AssistRequestInstructionsArgWrapper;
 
+
 /**
- * Cap2AssistRequestInstructionsArgWrapper
+ * Cap2AssistRequestInstructionsArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2AssistRequestInstructionsArgWrapper extends AssistRequestInstructionsArgWrapper {
 
+    /**
+     * Sets the IPSSP capabilities wrapper.
+     *
+     * @param ipsspCapabilitiesWrapper the new IPSSP capabilities wrapper
+     */
     void setIPSSPCapabilitiesWrapper(Cap2IPSSPCapabilitiesWrapper ipsspCapabilitiesWrapper);
 }

@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * RequestedInformationValueWrapper
+ * RequestedInformationValueWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface RequestedInformationValueWrapper extends Serializable {
 
+    /**
+     * Checks if is call connected elapsed time value chosen.
+     *
+     * @return true, if is call connected elapsed time value chosen
+     */
     boolean isCallConnectedElapsedTimeValueChosen();
 
+    /**
+     * Gets the call connected elapsed time value.
+     *
+     * @return the call connected elapsed time value
+     */
     Integer getCallConnectedElapsedTimeValue();
 }

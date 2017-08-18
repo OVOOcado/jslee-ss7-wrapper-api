@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap3;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap2.Cap2ConnectArgWrapper;
 
 /**
- * Cap3ConnectArgWrapper
+ * Cap3ConnectArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

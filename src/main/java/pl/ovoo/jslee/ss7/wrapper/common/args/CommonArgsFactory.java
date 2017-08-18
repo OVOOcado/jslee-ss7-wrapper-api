@@ -29,15 +29,39 @@ import pl.ovoo.jslee.ss7.wrapper.common.args.SccpAddressWrapper.Type;
 
 import java.io.Serializable;
 
+
 /**
- * CommonArgsFactory
+ * CommonArgsFactory.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface CommonArgsFactory extends Serializable {
 
+	/**
+	 * Creates a new CommonArgs object.
+	 *
+	 * @param routeOnPC the route on pc
+	 * @param gt the gt
+	 * @param pc the pc
+	 * @param ssn the ssn
+	 * @param type the type
+	 * @return the sccp address wrapper
+	 * @throws Ss7WrapperException the ss7 wrapper exception
+	 */
 	SccpAddressWrapper createSccpAddress(boolean routeOnPC, GlobalTitleWrapper gt, Integer pc, Integer ssn, Type type) throws Ss7WrapperException;
     
+    /**
+     * Creates a new CommonArgs object.
+     *
+     * @param address the address
+     * @param translationType the translation type
+     * @param globalTitleIndicator the global title indicator
+     * @param numberingPlan the numbering plan
+     * @param encodingScheme the encoding scheme
+     * @param nature the nature
+     * @return the global title wrapper
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     GlobalTitleWrapper createGlobalTitle(String address, Integer translationType, GlobalTitleIndicator globalTitleIndicator, NumberingPlan numberingPlan, EncodingScheme encodingScheme, Nature nature) throws Ss7WrapperException;
     
 }

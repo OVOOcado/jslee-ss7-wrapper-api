@@ -20,26 +20,49 @@
 
 package pl.ovoo.jslee.ss7.wrapper.common.args;
 
+
 /**
  * Created by karolsimka on 09.06.17.
  */
 public enum SmDeliveryOutcome {
 
 
+        /** The memory capacity exceeded. */
         memoryCapacityExceeded(0),
+        
+        /** The absent subscriber. */
         absentSubscriber(1),
+        
+        /** The successful transfer. */
         successfulTransfer(2);
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new sm delivery outcome.
+         *
+         * @param code the code
+         */
         SmDeliveryOutcome(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the sm delivery outcome
+         */
         public static SmDeliveryOutcome valueOf(int id) {
             for (SmDeliveryOutcome m : values()) {
                 if (m.value == id) {

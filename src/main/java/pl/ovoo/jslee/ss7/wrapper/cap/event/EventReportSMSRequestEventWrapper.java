@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.EventReportSMSArgWrapper;
 
+
 /**
- * EventReportSMSRequestEventWrapper
+ * EventReportSMSRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface EventReportSMSRequestEventWrapper extends EventWrapper {
 
+    /**
+     * Gets the argument.
+     *
+     * @return the argument
+     */
     EventReportSMSArgWrapper getArgument();
 }

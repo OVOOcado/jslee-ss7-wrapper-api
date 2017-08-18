@@ -21,7 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 /**
- * DialogCloseEventWrapper
+ * DialogCloseEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

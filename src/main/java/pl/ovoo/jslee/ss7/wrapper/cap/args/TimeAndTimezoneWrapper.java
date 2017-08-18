@@ -22,24 +22,60 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * TimeAndTimezoneWrapper
+ * TimeAndTimezoneWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface TimeAndTimezoneWrapper extends Serializable {
 
+    /**
+     * Gets the year.
+     *
+     * @return the year
+     */
     int getYear();
 
+    /**
+     * Gets the month.
+     *
+     * @return the month
+     */
     int getMonth();
 
+    /**
+     * Gets the day.
+     *
+     * @return the day
+     */
     int getDay();
 
+    /**
+     * Gets the hour.
+     *
+     * @return the hour
+     */
     int getHour();
 
+    /**
+     * Gets the minute.
+     *
+     * @return the minute
+     */
     int getMinute();
 
+    /**
+     * Gets the second.
+     *
+     * @return the second
+     */
     int getSecond();
 
+    /**
+     * Gets the time zone.
+     *
+     * @return the time zone
+     */
     int getTimeZone();
 }

@@ -24,18 +24,39 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 
+
 /**
- * ConnectSMSArgWrapper
+ * ConnectSMSArgWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface ConnectSMSArgWrapper extends Serializable {
 
+    /**
+     * Sets the destination subscriber number.
+     *
+     * @param destinationSubscriberNumber the new destination subscriber number
+     */
     void setDestinationSubscriberNumber(CalledPartyBCDNumberWrapper destinationSubscriberNumber);
 
+    /**
+     * Sets the SMSC address.
+     *
+     * @param smscAddress the new SMSC address
+     */
     void setSMSCAddress(ISDNAddressStringWrapper smscAddress);
 
+    /**
+     * Gets the destination subscriber number.
+     *
+     * @return the destination subscriber number
+     */
     CalledPartyBCDNumberWrapper getDestinationSubscriberNumber();
     
+    /**
+     * Gets the SMSC address.
+     *
+     * @return the SMSC address
+     */
     ISDNAddressStringWrapper getSMSCAddress();
 }

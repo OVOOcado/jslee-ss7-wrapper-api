@@ -21,7 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.cap;
 
 /**
- * SmsCapDialogWrapper
+ * SmsCapDialogWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

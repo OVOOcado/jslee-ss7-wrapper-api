@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * RPCauseWrapper
+ * RPCauseWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface RPCauseWrapper extends Serializable {
 
+	/**
+	 * Gets the rp cause value.
+	 *
+	 * @return the rp cause value
+	 */
 	RPCauseValue getRpCauseValue();
 }

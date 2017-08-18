@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * SendingSideIDWrapper
+ * SendingSideIDWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface SendingSideIDWrapper extends Serializable {
 
+    /**
+     * Gets the sending side id.
+     *
+     * @return the sending side id
+     */
     LegType getSendingSideID();
 }

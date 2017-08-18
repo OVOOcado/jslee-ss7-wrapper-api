@@ -23,7 +23,7 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap1;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.EventReportBCSMArgWrapper;
 
 /**
- * Cap1EventReportBCSMArgWrapper
+ * Cap1EventReportBCSMArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

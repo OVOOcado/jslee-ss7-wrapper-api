@@ -24,17 +24,36 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 
+
 /**
- * ReleaseCallArgWrapper
+ * ReleaseCallArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface ReleaseCallArgWrapper extends Serializable {
 
+    /**
+     * Sets the initial call segment.
+     *
+     * @param cause the new initial call segment
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void setInitialCallSegment(CauseWrapper cause) throws Ss7WrapperException;
 
+    /**
+     * Gets the initial call segment.
+     *
+     * @return the initial call segment
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     CauseWrapper getInitialCallSegment() throws Ss7WrapperException;
 
+    /**
+     * Checks if is initial call segment chose.
+     *
+     * @return true, if is initial call segment chose
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     boolean isInitialCallSegmentChose() throws Ss7WrapperException;
 
 

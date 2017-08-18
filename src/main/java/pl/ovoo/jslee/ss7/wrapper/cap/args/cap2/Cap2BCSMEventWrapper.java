@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.BCSMEventWrapper;
 
+
 /**
- * BCSMEventWrapper
+ * BCSMEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2BCSMEventWrapper extends BCSMEventWrapper {
 
+    /**
+     * Checks for dp specific criteria.
+     *
+     * @return true, if successful
+     */
     boolean hasDPSpecificCriteria();
 
+    /**
+     * Gets the DP specific criteria.
+     *
+     * @return the DP specific criteria
+     */
     Cap2DPSpecificCriteriaWrapper getDPSpecificCriteria();
 }

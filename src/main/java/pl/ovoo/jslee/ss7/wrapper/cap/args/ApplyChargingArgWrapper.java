@@ -22,17 +22,33 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * ApplyChargingArgWrapper
+ * ApplyChargingArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface ApplyChargingArgWrapper extends Serializable {
 
+    /**
+     * Sets the a ch billing charging characteristics.
+     *
+     * @param aChBillingChargingCharacteristics the new a ch billing charging characteristics
+     */
     void setAChBillingChargingCharacteristics(AChBillingChargingCharacteristicsWrapper aChBillingChargingCharacteristics);
 
+    /**
+     * Sets the party to charge.
+     *
+     * @param partyToCharge the new party to charge
+     */
     void setPartyToCharge(SendingSideIDWrapper partyToCharge);
 
+    /**
+     * Gets the party to charge.
+     *
+     * @return the party to charge
+     */
     SendingSideIDWrapper getPartyToCharge();
 
 

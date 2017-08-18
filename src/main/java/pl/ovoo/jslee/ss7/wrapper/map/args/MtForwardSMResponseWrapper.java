@@ -22,10 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 import java.io.Serializable;
 
+
 /**
  * Created by karolsimka on 09.06.17.
  */
 public interface MtForwardSMResponseWrapper extends Serializable{
 
+    /**
+     * Gets the text.
+     *
+     * @return the text
+     */
     String getText();
 }

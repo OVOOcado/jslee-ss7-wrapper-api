@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 import java.io.Serializable;
 
+
 /**
- * MAPExt_BasicServiceCodeWrapper
+ * MAPExt_BasicServiceCodeWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface MAPExt_BasicServiceCodeWrapper extends Serializable {
 	
+	/**
+	 * Gets the ext_ teleservice.
+	 *
+	 * @return the ext_ teleservice
+	 */
 	byte[] getExt_Teleservice();
 }

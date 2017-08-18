@@ -26,20 +26,55 @@ import pl.ovoo.jslee.ss7.wrapper.map.args.AnyTimeInterrogationResultWrapper;
 import pl.ovoo.jslee.ss7.wrapper.map.args.AnyTimeSubscriptionInterrogationArgWrapper;
 import pl.ovoo.jslee.ss7.wrapper.map.args.InsertSubscriberDataArg_v1Wrapper;
 
+
 /**
- * MobillityMapDialogWrapper
+ * MobillityMapDialogWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface MobilityMapDialogWrapper extends MapDialogWrapper {
     
+    /**
+     * Send any time interrogation.
+     *
+     * @param atiTimeout the ati timeout
+     * @param arg the arg
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendAnyTimeInterrogation(long atiTimeout, AnyTimeInterrogationArgWrapper arg) throws Ss7WrapperException;
     
+    /**
+     * Send any time interrogation response.
+     *
+     * @param invoke the invoke
+     * @param arg the arg
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendAnyTimeInterrogationResponse(long invoke, AnyTimeInterrogationResultWrapper arg) throws Ss7WrapperException;
     
+    /**
+     * Send any time subscription interrogation.
+     *
+     * @param atiTimeout the ati timeout
+     * @param arg the arg
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendAnyTimeSubscriptionInterrogation(long atiTimeout, AnyTimeSubscriptionInterrogationArgWrapper arg) throws Ss7WrapperException;
     
+    /**
+     * Send insert subscriber data arg_v1.
+     *
+     * @param isdTimeout the isd timeout
+     * @param arg the arg
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendInsertSubscriberDataArg_v1(long isdTimeout, InsertSubscriberDataArg_v1Wrapper arg) throws Ss7WrapperException;
     
+    /**
+     * Send insert subscriber data response.
+     *
+     * @param invoke the invoke
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     void sendInsertSubscriberDataResponse(long invoke) throws Ss7WrapperException;
 }

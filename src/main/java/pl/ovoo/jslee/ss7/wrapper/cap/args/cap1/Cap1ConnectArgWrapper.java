@@ -25,7 +25,7 @@ import java.io.Serializable;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.ConnectArgWrapper;
 
 /**
- * Cap1ConnectArgWrapper
+ * Cap1ConnectArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

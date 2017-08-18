@@ -21,7 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.common.args;
 
 /**
- * SMSAddressStringWrapper
+ * SMSAddressStringWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

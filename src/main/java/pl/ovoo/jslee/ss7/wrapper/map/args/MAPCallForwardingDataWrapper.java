@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 import java.io.Serializable;
 
+
 /**
- * MAPCallForwardingDataWrapper
+ * MAPCallForwardingDataWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface MAPCallForwardingDataWrapper extends Serializable {
 	
+	/**
+	 * Gets the forwarding feature list.
+	 *
+	 * @return the forwarding feature list
+	 */
 	MAPExt_ForwFeatureWrapper[] getForwardingFeatureList();
 }

@@ -22,22 +22,53 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * ConnectArgWrapper
+ * ConnectArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface ConnectArgWrapper extends Serializable{
 
+    /**
+     * Sets the original called party id.
+     *
+     * @param originalCalledPartyID the new original called party id
+     */
     void setOriginalCalledPartyID(OriginalCalledNumberWrapper originalCalledPartyID);
 
+    /**
+     * Gets the original called party id.
+     *
+     * @return the original called party id
+     */
     OriginalCalledNumberWrapper getOriginalCalledPartyID();
 
+    /**
+     * Sets the redirecting party id.
+     *
+     * @param redirectingPartyID the new redirecting party id
+     */
     void setRedirectingPartyID(RedirectingPartyNumberWrapper redirectingPartyID);
 
+    /**
+     * Sets the redirection information.
+     *
+     * @param redirectionInformation the new redirection information
+     */
     void setRedirectionInformation(RedirectionInformationWrapper redirectionInformation);
 
+    /**
+     * Sets the destination routing address.
+     *
+     * @param destinationRoutingAddress the new destination routing address
+     */
     void setDestinationRoutingAddress(CalledPartyNumberWrapper[] destinationRoutingAddress);
 
+    /**
+     * Gets the destination routing address.
+     *
+     * @return the destination routing address
+     */
     CalledPartyNumberWrapper[] getDestinationRoutingAddress();
 }

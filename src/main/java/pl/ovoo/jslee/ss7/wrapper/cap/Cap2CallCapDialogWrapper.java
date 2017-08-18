@@ -24,16 +24,31 @@ import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.ApplyChargingReportArgWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.ResetTimerArgWrapper;
 
+
 /**
- * Cap2CallCapDialogWrapper
+ * Cap2CallCapDialogWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2CallCapDialogWrapper extends Cap1CallCapDialogWrapper {
 
 
+    /**
+     * Send apply charging report.
+     *
+     * @param applyChargingReportArg the apply charging report arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendApplyChargingReport(ApplyChargingReportArgWrapper applyChargingReportArg) throws Ss7WrapperException;
 
+    /**
+     * Send reset timer.
+     *
+     * @param resetTimerArgWrapper the reset timer arg wrapper
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
     int sendResetTimer(ResetTimerArgWrapper resetTimerArgWrapper) throws Ss7WrapperException;
 
 }

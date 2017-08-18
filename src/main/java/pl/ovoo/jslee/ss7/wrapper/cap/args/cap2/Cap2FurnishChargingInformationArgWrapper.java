@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap2;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.FurnishChargingInformationArgWrapper;
 
+
 /**
- * Cap2FurnishChargingInformationArgWrapper
+ * Cap2FurnishChargingInformationArgWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap2FurnishChargingInformationArgWrapper extends FurnishChargingInformationArgWrapper {
 
+    /**
+     * Gets the FCIBCCCAME lsequence1.
+     *
+     * @return the FCIBCCCAME lsequence1
+     */
     Cap2FCIBCCCAMELsequence1Wrapper getFCIBCCCAMELsequence1();
 
+    /**
+     * Sets the FCIBCCCAME lsequence1.
+     *
+     * @param fcibcccameLsequence1 the new FCIBCCCAME lsequence1
+     */
     void setFCIBCCCAMELsequence1(Cap2FCIBCCCAMELsequence1Wrapper fcibcccameLsequence1);
 }

@@ -22,53 +22,136 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 import java.io.Serializable;
 
+
 /**
- * ForwardedToNumberWrapper
+ * ForwardedToNumberWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface ForwardedToNumberWrapper extends Serializable {
 
+    /**
+     * Gets the address.
+     *
+     * @return the address
+     */
     String getAddress();
 
+    /**
+     * Gets the nature.
+     *
+     * @return the nature
+     */
     Nature getNature();
 
+    /**
+     * Gets the numbering plan.
+     *
+     * @return the numbering plan
+     */
     NumberingPlan getNumberingPlan();
 
+    /**
+     * Checks for address.
+     *
+     * @return true, if successful
+     */
     boolean hasAddress();
 
+    /**
+     * Checks for nature.
+     *
+     * @return true, if successful
+     */
     boolean hasNature();
 
+    /**
+     * Checks for numbering plan.
+     *
+     * @return true, if successful
+     */
     boolean hasNumberingPlan();
 
+    /**
+     * The Enum NumberingPlan.
+     */
     enum NumberingPlan {
-    	UNKNOWN(0),
-	    ISDN(1),
-	    SPARE_2(2),
-	    DATA(3),
-	    TELEX(4),
-	    SPARE_5(5),
-	    LAND_MOBILE(6),
-	    SPARE_7(7),
-	    NATIONAL(8),
-	    PRIVATE(9),
-	    RESERVED_10(10),
-	    RESERVED_11(11),
-	    RESERVED_12(12),
-	    RESERVED_13(13),
-	    RESERVED_14(14),
-	    RESERVED_15(15);
+    	
+	    /** The unknown. */
+	    UNKNOWN(0),
+	    
+    	/** The isdn. */
+    	ISDN(1),
+	    
+    	/** The SPAR e_2. */
+    	SPARE_2(2),
+	    
+    	/** The data. */
+    	DATA(3),
+	    
+    	/** The telex. */
+    	TELEX(4),
+	    
+    	/** The SPAR e_5. */
+    	SPARE_5(5),
+	    
+    	/** The land mobile. */
+    	LAND_MOBILE(6),
+	    
+    	/** The SPAR e_7. */
+    	SPARE_7(7),
+	    
+    	/** The national. */
+    	NATIONAL(8),
+	    
+    	/** The private. */
+    	PRIVATE(9),
+	    
+    	/** The RESERVE d_10. */
+    	RESERVED_10(10),
+	    
+    	/** The RESERVE d_11. */
+    	RESERVED_11(11),
+	    
+    	/** The RESERVE d_12. */
+    	RESERVED_12(12),
+	    
+    	/** The RESERVE d_13. */
+    	RESERVED_13(13),
+	    
+    	/** The RESERVE d_14. */
+    	RESERVED_14(14),
+	    
+    	/** The RESERVE d_15. */
+    	RESERVED_15(15);
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new numbering plan.
+         *
+         * @param code the code
+         */
         NumberingPlan(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the numbering plan
+         */
         public static NumberingPlan valueOf(int id) {
             for (NumberingPlan m : values()) {
                 if (m.value == id) {
@@ -79,27 +162,63 @@ public interface ForwardedToNumberWrapper extends Serializable {
         }
     }
 
+    /**
+     * The Enum Nature.
+     */
     enum Nature {
-    	UNKNOWN(0),
+    	
+	    /** The unknown. */
+	    UNKNOWN(0),
+        
+        /** The international. */
         INTERNATIONAL(1),
+        
+        /** The national. */
         NATIONAL(2),
+        
+        /** The network specific. */
         NETWORK_SPECIFIC(3),
+        
+        /** The subscriber. */
         SUBSCRIBER(4),
+        
+        /** The RESERVE d_5. */
         RESERVED_5(5),
+        
+        /** The abbreviated. */
         ABBREVIATED(6),
+        
+        /** The RESERVE d_7. */
         RESERVED_7(7);
 
 
+        /** The value. */
         private int value;
 
+        /**
+         * Instantiates a new nature.
+         *
+         * @param code the code
+         */
         private Nature(int code) {
             this.value = code;
         }
 
+        /**
+         * Gets the value.
+         *
+         * @return the value
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Value of.
+         *
+         * @param id the id
+         * @return the nature
+         */
         public static Nature valueOf(int id) {
         	for (Nature m : values()) {
                 if (m.value == id) {

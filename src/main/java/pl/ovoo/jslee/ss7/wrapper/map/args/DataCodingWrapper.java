@@ -20,22 +20,46 @@
 
 package pl.ovoo.jslee.ss7.wrapper.map.args;
 
+
 /**
  * Created by karolsimka on 06.07.17.
  */
 public enum DataCodingWrapper {
+    
+    /** The GS m7. */
     GSM7(0),
+    
+    /** The GS m8. */
     GSM8(4),
+    
+    /** The UC s2. */
     UCS2(8);
 
+    /** The value. */
     private int value;
 
+    /**
+     * Instantiates a new data coding wrapper.
+     *
+     * @param code the code
+     */
     DataCodingWrapper(int code){this.value = code;}
 
+    /**
+     * Gets the value.
+     *
+     * @return the value
+     */
     public int getValue() {
         return this.value;
     }
 
+    /**
+     * Lookup.
+     *
+     * @param charsetName the charset name
+     * @return the data coding wrapper
+     */
     public static DataCodingWrapper lookup(String charsetName){
         if("UTF-16".equals(charsetName) || "UTF-16BE".equals(charsetName) || "UTF16-LE".equals(charsetName))
             return DataCodingWrapper.UCS2;

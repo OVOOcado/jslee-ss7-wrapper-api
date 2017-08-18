@@ -21,7 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.common.args;
 
 /**
- * ISDNAddressStringWrapper
+ * ISDNAddressStringWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */

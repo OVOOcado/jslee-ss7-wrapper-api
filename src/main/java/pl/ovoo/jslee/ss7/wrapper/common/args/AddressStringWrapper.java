@@ -22,23 +22,54 @@ package pl.ovoo.jslee.ss7.wrapper.common.args;
 
 import java.io.Serializable;
 
+
 /**
- * AddressStringWrapper
+ * AddressStringWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface AddressStringWrapper extends Serializable {
 
+	/**
+	 * Gets the address.
+	 *
+	 * @return the address
+	 */
 	String getAddress();
 
+	/**
+	 * Gets the nature.
+	 *
+	 * @return the nature
+	 */
 	Nature getNature();
 
+	/**
+	 * Gets the numbering plan.
+	 *
+	 * @return the numbering plan
+	 */
 	NumberingPlan getNumberingPlan();
 	
+	/**
+	 * Checks for address.
+	 *
+	 * @return true, if successful
+	 */
 	boolean hasAddress();
 	
+	/**
+	 * Checks for nature.
+	 *
+	 * @return true, if successful
+	 */
 	boolean hasNature();
 	
+	/**
+	 * Checks for numbering plan.
+	 *
+	 * @return true, if successful
+	 */
 	boolean hasNumberingPlan();
 
 //	public interface MessageType{
@@ -47,26 +78,62 @@ public interface AddressStringWrapper extends Serializable {
 //	public interface RoutingToInternalNetworkNumber{
 //	}
 
-	enum Nature {
+	/**
+ * The Enum Nature.
+ */
+enum Nature {
+		
+		/** The unknown. */
 		UNKNOWN(0),
+		
+		/** The international. */
 		INTERNATIONAL(1),
+		
+		/** The national. */
 		NATIONAL(2),
+		
+		/** The network specific. */
 		NETWORK_SPECIFIC(3),
+		
+		/** The subscriber. */
 		SUBSCRIBER(4),
+		
+		/** The RESERVE d_5. */
 		RESERVED_5(5),
+		
+		/** The abbreviated. */
 		ABBREVIATED(6),
+		
+		/** The RESERVE d_7. */
 		RESERVED_7(7);
 
+		/** The value. */
 		private int value;
 
+		/**
+		 * Instantiates a new nature.
+		 *
+		 * @param code the code
+		 */
 		Nature(int code) {
 			this.value = code;
 		}
 
+		/**
+		 * Gets the value.
+		 *
+		 * @return the value
+		 */
 		public int getValue() {
 			return this.value;
 		}
 
+		/**
+		 * Value of.
+		 *
+		 * @param id the id
+		 * @return the nature
+		 */
 		public static Nature valueOf(int id) {
 			for (Nature m : values()) {
 				if (m.value == id) {
@@ -78,34 +145,75 @@ public interface AddressStringWrapper extends Serializable {
 	}
 
 
+	/**
+	 * The Enum NumberingPlan.
+	 */
 	enum NumberingPlan {
+		
+		/** The unknown. */
 		UNKNOWN(0),
+		
+		/** The isdn. */
 		ISDN(1),
+		
+		/** The SPAR e_2. */
 		SPARE_2(2),
+		
+		/** The data. */
 		DATA(3),
+		
+		/** The telex. */
 		TELEX(4),
+		
+		/** The SPAR e_5. */
 		SPARE_5(5),
+		
+		/** The land mobile. */
 		LAND_MOBILE(6),
+		
+		/** The SPAR e_7. */
 		SPARE_7(7),
+		
+		/** The national. */
 		NATIONAL(8),
+		
+		/** The private. */
 		PRIVATE(9),
 //		RESERVED_10(10),
 //		RESERVED_11(11),
 //		RESERVED_12(12),
 //		RESERVED_13(13),
+/** The RESERVE d_15. */
 //		RESERVED_14(14),
 		RESERVED_15(15);
 
+		/** The value. */
 		private int value;
 
+		/**
+		 * Instantiates a new numbering plan.
+		 *
+		 * @param code the code
+		 */
 		NumberingPlan(int code) {
 			this.value = code;
 		}
 
+		/**
+		 * Gets the value.
+		 *
+		 * @return the value
+		 */
 		public int getValue() {
 			return this.value;
 		}
 
+		/**
+		 * Value of.
+		 *
+		 * @param id the id
+		 * @return the numbering plan
+		 */
 		public static NumberingPlan valueOf(int id) {
 			for (NumberingPlan m : values()) {
 				if (m.value == id) {

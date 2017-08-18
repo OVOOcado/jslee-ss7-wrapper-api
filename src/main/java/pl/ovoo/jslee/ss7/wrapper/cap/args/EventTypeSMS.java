@@ -20,21 +20,48 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
+
+/**
+ * The Enum EventTypeSMS.
+ */
 public enum EventTypeSMS {
+    
+    /** The sms collected info. */
     smsCollectedInfo(1),
+    
+    /** The o sms failure. */
     oSmsFailure(2),
+    
+    /** The o sms submission. */
     oSmsSubmission(3);
 
+    /** The value. */
     private int value;
 
+    /**
+     * Instantiates a new event type sms.
+     *
+     * @param code the code
+     */
     EventTypeSMS(int code) {
         this.value = code;
     }
 
+    /**
+     * Gets the value.
+     *
+     * @return the value
+     */
     public int getValue() {
         return this.value;
     }
 
+    /**
+     * Value of.
+     *
+     * @param id the id
+     * @return the event type sms
+     */
     public static EventTypeSMS valueOf(int id) {
         for (EventTypeSMS m : values()) {
             if (m.value == id) {

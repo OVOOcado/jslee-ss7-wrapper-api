@@ -22,12 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args.cap3;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap2.Cap2ReleaseIfDurationExceededWrapper;
 
+
 /**
- * Cap3ReleaseIfDurationExceededWrapper
+ * Cap3ReleaseIfDurationExceededWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface Cap3ReleaseIfDurationExceededWrapper extends Cap2ReleaseIfDurationExceededWrapper{
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.cap.args.cap2.Cap2ReleaseIfDurationExceededWrapper#getTone()
+     */
     boolean getTone();
 }

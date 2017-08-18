@@ -22,30 +22,65 @@ package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
 import java.io.Serializable;
 
+
 /**
- * MiscCallInfoWrapper
+ * MiscCallInfoWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface MiscCallInfoWrapper extends Serializable {
 
+	/**
+	 * Gets the message type.
+	 *
+	 * @return the message type
+	 */
 	MessageType getMessageType();
 
+	/**
+	 * Checks for message type.
+	 *
+	 * @return true, if successful
+	 */
 	boolean hasMessageType();
 
+	/**
+	 * The Enum MessageType.
+	 */
 	enum MessageType {
-		request(0), notification(1);
+		
+		/** The request. */
+		request(0), 
+ /** The notification. */
+ notification(1);
 
+		/** The value. */
 		private int value;
 
+		/**
+		 * Instantiates a new message type.
+		 *
+		 * @param code the code
+		 */
 		MessageType(int code) {
 			this.value = code;
 		}
 
+		/**
+		 * Gets the value.
+		 *
+		 * @return the value
+		 */
 		public int getValue() {
 			return this.value;
 		}
 
+		/**
+		 * Value of.
+		 *
+		 * @param id the id
+		 * @return the message type
+		 */
 		public static MessageType valueOf(int id) {
 			for (MessageType m : values()) {
 				if (m.value == id) {

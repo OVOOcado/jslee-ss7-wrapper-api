@@ -22,14 +22,25 @@ package pl.ovoo.jslee.ss7.wrapper.map.args;
 
 import java.io.Serializable;
 
+
 /**
- * MAPSubscriberInfoWrapper
+ * MAPSubscriberInfoWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface MAPSubscriberInfoWrapper extends Serializable {
 	
+	/**
+	 * Checks for location information.
+	 *
+	 * @return true, if successful
+	 */
 	boolean hasLocationInformation();
 	
+	/**
+	 * Gets the location information.
+	 *
+	 * @return the location information
+	 */
 	MAPLocationInformationWrapper getLocationInformation();
 }

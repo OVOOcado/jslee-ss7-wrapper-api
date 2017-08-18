@@ -22,14 +22,23 @@ package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 import pl.ovoo.jslee.ss7.wrapper.map.args.DialogOpenArgWrapper;
 
+
 /**
- * DialogOpenRequestEventWrapper
+ * DialogOpenRequestEventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface DialogOpenRequestEventWrapper extends MapArgumentEventWrapper<DialogOpenArgWrapper> {
 
+	/**
+	 * Gets the component events.
+	 *
+	 * @return the component events
+	 */
 	MapEventWrapper[] getComponentEvents();
 
+    /* (non-Javadoc)
+     * @see pl.ovoo.jslee.ss7.wrapper.map.event.MapArgumentEventWrapper#getArgument()
+     */
     DialogOpenArgWrapper getArgument();
 }

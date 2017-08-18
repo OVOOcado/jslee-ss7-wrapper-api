@@ -22,12 +22,18 @@ package pl.ovoo.jslee.ss7.wrapper.common.args;
 
 import java.io.Serializable;
 
+
 /**
- * IMSIAddressWrapper
+ * IMSIAddressWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface IMSIAddressWrapper extends Serializable {
 
+    /**
+     * Gets the address.
+     *
+     * @return the address
+     */
     String getAddress();
 }

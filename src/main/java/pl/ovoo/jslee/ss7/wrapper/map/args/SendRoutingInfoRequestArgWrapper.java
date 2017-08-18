@@ -24,14 +24,25 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 
+
 /**
- * SendRoutingInfoRequestArgWrapper
+ * SendRoutingInfoRequestArgWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface SendRoutingInfoRequestArgWrapper extends Serializable {
 
+    /**
+     * Gets the msisdn.
+     *
+     * @return the msisdn
+     */
     ISDNAddressStringWrapper getMsisdn();
     
+    /**
+     * Gets the gmsc address.
+     *
+     * @return the gmsc address
+     */
     ISDNAddressStringWrapper getGmscAddress();
 }

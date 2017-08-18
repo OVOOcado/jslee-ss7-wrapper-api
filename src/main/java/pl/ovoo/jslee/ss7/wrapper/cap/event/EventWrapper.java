@@ -22,13 +22,19 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
 
 import pl.ovoo.jslee.ss7.wrapper.cap.CapDialogWrapper;
 
+
 /**
- * EventWrapper
+ * EventWrapper.
  *
  * @author pawel.borecki@ovoo.pl
  */
 public interface EventWrapper {
 
+    /**
+     * Gets the dialog.
+     *
+     * @return the dialog
+     */
     CapDialogWrapper getDialog();
 
 }

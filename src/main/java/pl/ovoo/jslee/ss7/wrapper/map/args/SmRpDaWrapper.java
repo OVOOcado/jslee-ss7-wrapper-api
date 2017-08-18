@@ -24,10 +24,16 @@ import java.io.Serializable;
 
 import pl.ovoo.jslee.ss7.wrapper.common.args.IMSIAddressWrapper;
 
+
 /**
  * Created by karolsimka on 03.07.17.
  */
 public interface SmRpDaWrapper extends Serializable {
 
+    /**
+     * Gets the imsi.
+     *
+     * @return the imsi
+     */
     IMSIAddressWrapper getIMSI();
 }

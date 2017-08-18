@@ -22,12 +22,16 @@ package pl.ovoo.jslee.ss7.wrapper.map.event;
 
 import pl.ovoo.jslee.ss7.wrapper.map.args.AnyTimeInterrogationArgWrapper;
 
+
 /**
- * AnyTimeInterrogationRequestEventWrapper
+ * AnyTimeInterrogationRequestEventWrapper.
  *
  * @author kacper.mosienski@ovoo.pl
  */
 public interface AnyTimeInterrogationRequestEventWrapper extends MapArgumentEventWrapper<AnyTimeInterrogationArgWrapper> {
 
+	/* (non-Javadoc)
+	 * @see pl.ovoo.jslee.ss7.wrapper.map.event.MapArgumentEventWrapper#getArgument()
+	 */
 	AnyTimeInterrogationArgWrapper getArgument();
 }
