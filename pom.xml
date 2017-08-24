@@ -35,4 +35,9 @@
 		</dependency>
 	</dependencies>
 
+	<scm>
+        <developerConnection>scm:git:http://10.0.1.2/gitlab/ss7-cap-wrapper/ss7-cap-wrapper-api.git</developerConnection>
+        <connection>scm:git:http://10.0.1.2/gitlab/ss7-cap-wrapper/ss7-cap-wrapper-api.git</connection>
+    </scm>
+	
 </project>
