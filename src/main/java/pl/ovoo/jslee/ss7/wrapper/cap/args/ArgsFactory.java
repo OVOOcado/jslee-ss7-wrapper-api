@@ -90,8 +90,9 @@ public interface ArgsFactory {
      * @param dialog the dialog
      * @param destAddress the dest address
      * @return the cap dialog wrapper
+     * @throws Ss7WrapperException 
      */
-    CapDialogWrapper createRelayedDialog(CapDialogWrapper dialog, SccpAddressWrapper destAddress);
+    CapDialogWrapper createRelayedDialog(CapDialogWrapper dialog, SccpAddressWrapper destAddress) throws Ss7WrapperException;
     
     /**
      * Creates a new Args object.
