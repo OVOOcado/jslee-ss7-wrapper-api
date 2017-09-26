@@ -20,12 +20,12 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap;
 
+import java.io.Serializable;
+
 import javax.slee.ActivityContextInterface;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
-
-import java.io.Serializable;
-
+import pl.ovoo.jslee.ss7.wrapper.common.args.SccpAddressWrapper;
 
 /**
  * CapDialogWrapper.
@@ -50,7 +50,7 @@ public interface CapDialogWrapper extends Serializable {
 
     /**
      * Refuse dialog.
-     *
+     * 
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
     void refuseDialog() throws Ss7WrapperException;
@@ -60,6 +60,7 @@ public interface CapDialogWrapper extends Serializable {
      *
      * @param b the b
      * @throws Ss7WrapperException the ss7 wrapper exception
+     * 
      */
     void sendClose(final boolean b) throws Ss7WrapperException;
 
@@ -83,18 +84,39 @@ public interface CapDialogWrapper extends Serializable {
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
     void acceptDialog() throws Ss7WrapperException;
-    
+
+    /**
+     * Release dialog.
+     * 
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
+    void release() throws Ss7WrapperException;
+
     /**
      * Gets the dialog id.
      *
      * @return the dialog id
      */
     String getDialogID();
-    
+
     /**
      * Gets the application context.
      *
      * @return the application context
      */
     ApplicationContextWrapper getApplicationContext();
+
+    /**
+     * Gets the remote sccp address.
+     *
+     * @return the sccp address
+     */
+    SccpAddressWrapper getRemoteSccpAddress();
+
+    /**
+     * Gets the local sccp address.
+     *
+     * @return the sccp address
+     */
+    SccpAddressWrapper getLocalSccpAddress();
 }

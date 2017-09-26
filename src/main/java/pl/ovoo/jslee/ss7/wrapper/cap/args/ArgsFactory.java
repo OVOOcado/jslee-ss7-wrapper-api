@@ -20,6 +20,8 @@
 
 package pl.ovoo.jslee.ss7.wrapper.cap.args;
 
+import javax.slee.ActivityContextInterface;
+
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
 import pl.ovoo.jslee.ss7.wrapper.cap.ApplicationContextWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.CapDialogWrapper;
@@ -52,11 +54,8 @@ import pl.ovoo.jslee.ss7.wrapper.cap.args.cap3.Cap3InitialDPSMSArgWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap3.Cap3ReleaseIfDurationExceededWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap3.Cap3TimeDurationChargingResultWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap3.Cap3TimeInformationWrapper;
-import pl.ovoo.jslee.ss7.wrapper.cap.event.DialogOpenRequestEventWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.AddressStringWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.SccpAddressWrapper;
-
-import javax.slee.ActivityContextInterface;
 
 
 /**
@@ -85,6 +84,15 @@ public interface ArgsFactory {
      */
     CapDialogWrapper createDialog(ActivityContextInterface aci);
 
+    /**
+     * Creates a new Args object.
+     *
+     * @param dialog the dialog
+     * @param destAddress the dest address
+     * @return the cap dialog wrapper
+     */
+    CapDialogWrapper createRelayedDialog(CapDialogWrapper dialog, SccpAddressWrapper destAddress);
+    
     /**
      * Creates a new Args object.
      *
