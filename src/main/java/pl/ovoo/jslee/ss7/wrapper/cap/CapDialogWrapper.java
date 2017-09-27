@@ -93,11 +93,18 @@ public interface CapDialogWrapper extends Serializable {
     void release() throws Ss7WrapperException;
 
     /**
-     * Gets the dialog id.
+     * Gets the local dialog id.
      *
-     * @return the dialog id
+     * @return the local dialog id
      */
     String getDialogID();
+    
+    /**
+     * Gets the remote dialog id.
+     *
+     * @return the remote dialog id
+     */
+    Long getRemoteDialogID();
 
     /**
      * Gets the application context.
