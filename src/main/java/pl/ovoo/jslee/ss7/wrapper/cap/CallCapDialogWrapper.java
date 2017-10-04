@@ -38,7 +38,6 @@ import pl.ovoo.jslee.ss7.wrapper.cap.args.SpecializedResourceReportArgWrapper;
 
 import java.io.Serializable;
 
-
 /**
  * SmsCapDialogWrapper.
  *
@@ -87,7 +86,8 @@ public interface CallCapDialogWrapper extends CapDialogWrapper, Serializable {
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendRequestReportBCSMEvent(RequestReportBCSMEventArgWrapper requestReportBCSMEventArg) throws Ss7WrapperException;
+    int sendRequestReportBCSMEvent(RequestReportBCSMEventArgWrapper requestReportBCSMEventArg)
+            throws Ss7WrapperException;
 
     /**
      * Send cancel.
@@ -105,7 +105,8 @@ public interface CallCapDialogWrapper extends CapDialogWrapper, Serializable {
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendCallInformationRequest(CallInformationRequestArgWrapper callInformationRequestArg) throws Ss7WrapperException;
+    int sendCallInformationRequest(CallInformationRequestArgWrapper callInformationRequestArg)
+            throws Ss7WrapperException;
 
     /**
      * Send apply charging.
@@ -123,7 +124,8 @@ public interface CallCapDialogWrapper extends CapDialogWrapper, Serializable {
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendEstablishTemporaryConnection(EstablishTemporaryConnectionArgWrapper establishTemporaryConnectionArg) throws Ss7WrapperException;
+    int sendEstablishTemporaryConnection(EstablishTemporaryConnectionArgWrapper establishTemporaryConnectionArg)
+            throws Ss7WrapperException;
 
     /**
      * Send play announcement.
@@ -154,23 +156,33 @@ public interface CallCapDialogWrapper extends CapDialogWrapper, Serializable {
     int sendEventReportBCSM(EventReportBCSMArgWrapper eventReportBCSMArg) throws Ss7WrapperException;
 
     /**
-     * Send activity test.
+     * Send activity request test.
+     *
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
+    int sendActivityRequestTest() throws Ss7WrapperException;
+
+    /**
+     * Send activity response test.
      *
      * @param invoke the invoke
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendActivityTest(long invoke) throws Ss7WrapperException;
+    int sendActivityResponseTest(long invoke) throws Ss7WrapperException;
 
     /**
      * Send specialized resource report.
      *
      * @param invoke the invoke
+     *            
      * @param specializedResourceReportArg the specialized resource report arg
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendSpecializedResourceReport(long invoke, SpecializedResourceReportArgWrapper specializedResourceReportArg) throws Ss7WrapperException;
+    int sendSpecializedResourceReport(long invoke, SpecializedResourceReportArgWrapper specializedResourceReportArg)
+            throws Ss7WrapperException;
 
     /**
      * Send assist request instructions.
@@ -179,7 +191,8 @@ public interface CallCapDialogWrapper extends CapDialogWrapper, Serializable {
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendAssistRequestInstructions(AssistRequestInstructionsArgWrapper assistRequestInstructionsArg) throws Ss7WrapperException;
+    int sendAssistRequestInstructions(AssistRequestInstructionsArgWrapper assistRequestInstructionsArg)
+            throws Ss7WrapperException;
 
     /**
      * Send call information report.
@@ -197,5 +210,6 @@ public interface CallCapDialogWrapper extends CapDialogWrapper, Serializable {
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendFurnishChargingInformation(FurnishChargingInformationArgWrapper furnishChargingInformationArg) throws Ss7WrapperException;
+    int sendFurnishChargingInformation(FurnishChargingInformationArgWrapper furnishChargingInformationArg)
+            throws Ss7WrapperException;
 }
