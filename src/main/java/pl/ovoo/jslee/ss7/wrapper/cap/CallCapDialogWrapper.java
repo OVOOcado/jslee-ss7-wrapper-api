@@ -156,21 +156,21 @@ public interface CallCapDialogWrapper extends CapDialogWrapper, Serializable {
     int sendEventReportBCSM(EventReportBCSMArgWrapper eventReportBCSMArg) throws Ss7WrapperException;
 
     /**
-     * Send activity request test.
+     * Send activity test request.
      *
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendActivityRequestTest() throws Ss7WrapperException;
+    int sendActivityTestRequest() throws Ss7WrapperException;
 
     /**
-     * Send activity response test.
+     * Send activity test response.
      *
      * @param invoke the invoke
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendActivityResponseTest(long invoke) throws Ss7WrapperException;
+    int sendActivityTestResponse(long invoke) throws Ss7WrapperException;
 
     /**
      * Send specialized resource report.

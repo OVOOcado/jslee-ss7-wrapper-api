@@ -25,6 +25,6 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
  *
  * @author pawel.borecki@ovoo.pl
  */
-public interface ActivitiyTestResponseEventWrapper extends EventWrapper {
+public interface ActivityTestResponseEventWrapper extends EventWrapper {
 
 }

@@ -25,6 +25,12 @@ package pl.ovoo.jslee.ss7.wrapper.cap.event;
  *
  * @author pawel.borecki@ovoo.pl
  */
-public interface ActivitiyTestRequestEventWrapper extends EventWrapper {
+public interface ActivityTestRequestEventWrapper extends EventWrapper {
 
+    /**
+     * Gets the invoke id
+     * 
+     * @return the invoke id
+     */
+    Long getInvokeId();
 }
