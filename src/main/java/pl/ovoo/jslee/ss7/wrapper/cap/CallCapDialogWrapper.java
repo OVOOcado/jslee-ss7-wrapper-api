@@ -170,7 +170,7 @@ public interface CallCapDialogWrapper extends CapDialogWrapper, Serializable {
      * @return the int
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
-    int sendActivityTestResponse(long invoke) throws Ss7WrapperException;
+    void sendActivityTestResponse(long invoke) throws Ss7WrapperException;
 
     /**
      * Send specialized resource report.
