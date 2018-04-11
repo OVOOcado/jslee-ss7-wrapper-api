@@ -83,16 +83,6 @@ public interface ArgsFactory {
      * @return the cap dialog wrapper
      */
     CapDialogWrapper createDialog(ActivityContextInterface aci);
-
-    /**
-     * Creates a new Args object.
-     *
-     * @param dialog the dialog
-     * @param destAddress the dest address
-     * @return the cap dialog wrapper
-     * @throws Ss7WrapperException 
-     */
-    CapDialogWrapper createRelayedDialog(CapDialogWrapper dialog, SccpAddressWrapper destAddress) throws Ss7WrapperException;
     
     /**
      * Creates a new Args object.
