@@ -56,6 +56,7 @@ import pl.ovoo.jslee.ss7.wrapper.cap.args.cap3.Cap3TimeDurationChargingResultWra
 import pl.ovoo.jslee.ss7.wrapper.cap.args.cap3.Cap3TimeInformationWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.AddressStringWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.SccpAddressWrapper;
+import pl.ovoo.jslee.ss7.wrapper.map.args.SubscriberStateWrapper;
 
 
 /**
@@ -811,4 +812,34 @@ public interface ArgsFactory {
      * @return the free format data wrapper
      */
     FreeFormatDataWrapper createFreeFormatData(byte[] freeFormatData);
+    
+    /**
+     * Creates a new Args object.
+     *
+     * @param nature the nature
+     * @param routingToInternalNetworkNumber the routing to internal network number
+     * @param numberingPlan the numbering plan
+     * @param addressRepresentationRestrictedIndicator the address representation restricted indicator
+     * @param internalNetworkNumberIndicator the internal network number indicator
+     * @param screeningIndicator the screening indicator
+     * @param address the address
+     * @return the location number wrapper
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
+    LocationNumberWrapper createLocationNumber(LocationNumberWrapper.Nature nature,
+    		LocationNumberWrapper.RoutingToInternalNetworkNumber routingToInternalNetworkNumber,
+    		LocationNumberWrapper.NumberingPlan numberingPlan,
+    		int addressRepresentationRestrictedIndicator,
+    		int internalNetworkNumberIndicator,
+    		int screeningIndicator,
+            String address) throws Ss7WrapperException;
+    
+    /**
+     * Creates a new Args object.
+     *
+     * @param notReachableReason the not reachable reason
+     * @param subscriberStateChoice the subscriber state choice
+     * @return the subscriber state wrapper
+     */
+    SubscriberStateWrapper createSubscriberState(int notReachableReason, String subscriberStateChoice);
 }

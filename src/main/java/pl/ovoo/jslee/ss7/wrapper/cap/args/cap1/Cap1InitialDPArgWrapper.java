@@ -24,9 +24,11 @@ import pl.ovoo.jslee.ss7.wrapper.cap.args.CallReferenceNumberWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.CalledPartyBCDNumberWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.ExtBasicServiceCodeWrapper;
 import pl.ovoo.jslee.ss7.wrapper.cap.args.InitialDPArgWrapper;
+import pl.ovoo.jslee.ss7.wrapper.cap.args.LocationNumberWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.IMSIAddressWrapper;
 import pl.ovoo.jslee.ss7.wrapper.common.args.ISDNAddressStringWrapper;
 import pl.ovoo.jslee.ss7.wrapper.map.args.MAPLocationInformationWrapper;
+import pl.ovoo.jslee.ss7.wrapper.map.args.SubscriberStateWrapper;
 
 
 /**
@@ -126,6 +128,48 @@ public interface Cap1InitialDPArgWrapper extends InitialDPArgWrapper {
      * @param locationInformation the new location information
      */
     void setLocationInformation(MAPLocationInformationWrapper locationInformation);
+
+    /**
+     * Checks for location number.
+     *
+     * @return true, if successful
+     */
+    boolean hasLocationNumber();
+
+    /**
+     * Gets the location number.
+     *
+     * @return the location number
+     */
+    LocationNumberWrapper getLocationNumber();
+
+    /**
+     * Sets the location number.
+     *
+     * @param locationNumber the new location number
+     */
+    void setLocationNumber(LocationNumberWrapper locationNumber);
+
+    /**
+     * Checks for subscriber state.
+     *
+     * @return true, if successful
+     */
+    boolean hasSubscriberState();
+
+    /**
+     * Gets the subscriber state.
+     *
+     * @return the subscriber state
+     */
+    SubscriberStateWrapper getSubscriberState();
+
+    /**
+     * Sets the subscriber state.
+     *
+     * @param subscriberState the new subscriber state
+     */
+    void setSubscriberState(SubscriberStateWrapper subscriberState);
 
     /**
      * Checks for msc address.
