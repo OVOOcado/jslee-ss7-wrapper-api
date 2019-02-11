@@ -297,6 +297,24 @@ public interface MapArgsFactory extends Serializable {
      */
     MtForwardShortMessageRequestWrapper createMtForwardShortMessageRequestWrapper(String text, Charset charset, AddressStringWrapper scOA, IMSIAddressWrapper imsi, String origAddress, boolean moreMessagesToSend,
     		boolean isConcatened, int msgRef, int segmCnt, int segmNum);
+
+    /**
+     * Creates a new MapArgs object.
+     *
+     * @param text the text
+     * @param charset the charset
+     * @param scOA the sc oa
+     * @param imsi the imsi
+     * @param origAddress the orig address
+     * @param moreMessagesToSend the more messages to send
+     * @param isConcatened the is concatened
+     * @param msgRef the msg ref
+     * @param segmCnt the segm cnt
+     * @param segmNum the segm num
+     * @return the mt forward short message request wrapper
+     */
+    ForwardShortMessageRequestWrapper createForwardShortMessageRequestWrapper(String text, Charset charset, AddressStringWrapper scOA, IMSIAddressWrapper imsi, String origAddress, boolean moreMessagesToSend,
+    		boolean isConcatened, int msgRef, int segmCnt, int segmNum);
     
     /**
      * Creates a new MapArgs object.

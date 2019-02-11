@@ -21,6 +21,7 @@
 package pl.ovoo.jslee.ss7.wrapper.map;
 
 import pl.ovoo.jslee.ss7.wrapper.Ss7WrapperException;
+import pl.ovoo.jslee.ss7.wrapper.map.args.ForwardShortMessageRequestWrapper;
 import pl.ovoo.jslee.ss7.wrapper.map.args.MtForwardShortMessageRequestWrapper;
 import pl.ovoo.jslee.ss7.wrapper.map.args.SendRoutingInfoForSMRequestArgWrapper;
 import pl.ovoo.jslee.ss7.wrapper.map.args.SendRoutingInfoForSMResponseWrapper;
@@ -59,4 +60,14 @@ public interface SMSMapDialogWrapper extends MapDialogWrapper {
      * @throws Ss7WrapperException the ss7 wrapper exception
      */
     int sendMtForwardSMRequest(long timeout, MtForwardShortMessageRequestWrapper arg) throws Ss7WrapperException;
+
+    /**
+     * Send forward sm request.
+     *
+     * @param timeout the timeout
+     * @param arg the arg
+     * @return the int
+     * @throws Ss7WrapperException the ss7 wrapper exception
+     */
+    int sendForwardSMRequest(long timeout, ForwardShortMessageRequestWrapper arg) throws Ss7WrapperException;
 }
