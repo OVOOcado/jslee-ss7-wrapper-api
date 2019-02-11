@@ -24,7 +24,7 @@
 
 	<groupId>pl.ovoo.jslee.ss7.wrapper</groupId>
     <artifactId>jslee-ss7-wrapper-api</artifactId>
-    <version>1.0.0.4-SNAPSHOT</version>
+    <version>1.0.0.4</version>
 	
 	<build>
 
@@ -48,7 +48,7 @@
 	<scm>
         <developerConnection>scm:git:http://10.0.1.2/gitlab/ss7-cap-wrapper/ss7-cap-wrapper-api.git</developerConnection>
         <connection>scm:git:http://10.0.1.2/gitlab/ss7-cap-wrapper/ss7-cap-wrapper-api.git</connection>
-      <tag>HEAD</tag>
+      <tag>jslee-ss7-wrapper-api-1.0.0.4</tag>
   </scm>
 	
 </project>
