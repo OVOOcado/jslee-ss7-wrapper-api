@@ -18,30 +18,23 @@
  *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package pl.ovoo.jslee.ss7.wrapper.map.args;
+package pl.ovoo.jslee.ss7.wrapper.common.args;
 
 import java.io.Serializable;
 
-import pl.ovoo.jslee.ss7.wrapper.common.args.ExtendedRoutingInfoWrapper;
-import pl.ovoo.jslee.ss7.wrapper.common.args.IMSIAddressWrapper;
+import pl.ovoo.jslee.ss7.wrapper.common.args.AddressStringWrapper.Nature;
+import pl.ovoo.jslee.ss7.wrapper.common.args.AddressStringWrapper.NumberingPlan;
 
 
 /**
  * Created by karolsimka on 06.06.17.
  */
-public interface SendRoutingInfoResponseWrapper extends Serializable{
+public interface ExtendedRoutingInfoWrapper extends Serializable {
 
     /**
-     * Gets the imsi.
+     * Gets the roaming info.
      *
-     * @return the imsi
+     * @return the roaming info
      */
-    IMSIAddressWrapper getImsi();
-
-    /**
-     * Gets the routing info.
-     *
-     * @return the routing info
-     */
-    ExtendedRoutingInfoWrapper getExtendedRoutingInfo();
+	RoutingInfoWrapper getRoutingInfo();
 }
